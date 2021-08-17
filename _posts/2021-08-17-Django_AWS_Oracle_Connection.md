@@ -86,10 +86,11 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		ln -sf /usr/local/oracle/instantclient_19_8/libclntsh.dylib.19.1 /usr/local/lib/libclntsh.dylib
 		```
 	+ 다시 `cursor = connection.cursor()`로 connection 여부를 확인하면 애러 메시지가 출력되지 않는 것을 확인할 수 있다.
+
 		[참조] [Python에서 Oracle 사용하기 (for Mac OS X)](https://davelogs.tistory.com/23)
-		[참조] [Python에서 Oracle 사용하기 (for Mac OS X)](https://davelogs.tistory.com/23)
+		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5MDk3MDM4LDU4NTY3NDYzOCwyMDI5OT
-kwODQsLTEyMzc0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkw
-OSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbNzEzOTc1NzAsNTg1Njc0NjM4LDIwMjk5OT
+A4NCwtMTIzNzQxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5
+LC0xODM3ODg2NDc3LC0xNDIzMjY2MDY1XX0=
 -->
