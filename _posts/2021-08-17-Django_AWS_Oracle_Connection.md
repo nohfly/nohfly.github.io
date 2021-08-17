@@ -9,7 +9,7 @@ published: true
 
 ## Oracle DB Connection 정보 설정
 + **settings.py 설정**
-*Oracle DB endpoint 정보 'HOST'에 입력*
+Django 프로젝트 내 settings.py 안에서 'DATABASES' 항목을 작성한다. ㄸ
 ```python
 DATABASES = {
 	'default': {
@@ -35,7 +35,7 @@ python manage.py shell
 >>> cursor = connection.cursor()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI1MzUxNzY0LC0xMjM3NDEwNTM0LDIwOT
-kzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMy
-NjYwNjVdfQ==
+eyJoaXN0b3J5IjpbLTIxMDgxNDEzNzYsLTEyMzc0MTA1MzQsMj
+A5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQy
+MzI2NjA2NV19
 -->
