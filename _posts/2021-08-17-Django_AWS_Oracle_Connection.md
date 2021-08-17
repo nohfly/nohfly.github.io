@@ -8,6 +8,7 @@ published: true
 ---
 
 ## Django - Oracle DB 연동
+
 + **settings.py 설정**
 ```python
 DATABASES = {
@@ -22,6 +23,7 @@ DATABASES = {
 }
 ```
 Django 프로젝트 내 settings.py 안에서 'DATABASES' 항목을 작성한다. AWS RDS DB 인스턴스에 접근할 경우, host ip가 변경될 수도 있기 때문에 Endpoint 경로를 입력한다.
+
 ---
 + **cx_Oracle 설치**
 ```
@@ -50,13 +52,14 @@ Oracle DB와의 32-bit/64-bit 불일치 문제가 아니라면 Oracle Instant Cl
 
 위의 경로에서 OS에 맞게 해당 라이브러리를 다운받고, [*cx_Oracle 8 Installation*](https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#) 설명에 따라 라이브러리를 설정한다.
 
-macOS의 경우, 라이브러리 경로를 파이선 실행 코드 내에서 한번 설정해줘야한다고 하는데,
+
 ```python
 import cx_Oracle
 cx_Oracle.init_oracle_client(lib_dir="/Users/your_username/Downloads/instantclient_19_8")
 ```
+라이브러리 경로를 파이선 실행 코드 내에서 한번 설정해줘야한다고 하는데,
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjQyOTc5NTcsMjAyOTk5MDg0LC0xMj
-M3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4
-ODY0NzcsLTE0MjMyNjYwNjVdfQ==
+eyJoaXN0b3J5IjpbLTM0MjE3MzM2MywyMDI5OTkwODQsLTEyMz
+c0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4
+NjQ3NywtMTQyMzI2NjA2NV19
 -->
