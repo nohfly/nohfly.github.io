@@ -9,7 +9,7 @@ published: true
 
 ## Oracle DB Connection 정보 설정
 + **settings.py 설정**
-Django 프로젝트 내 settings.py 안에서 'DATABASES' 항목을 작성한다. ㄸ
+Django 프로젝트 내 settings.py 안에서 'DATABASES' 항목을 작성한다. AWS RDS DB 인스턴스에 접근할 경우, host ip가 변경될 수도 있기 때문에 Endpoint 경로를 입력한다.
 ```python
 DATABASES = {
 	'default': {
@@ -35,7 +35,7 @@ python manage.py shell
 >>> cursor = connection.cursor()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDgxNDEzNzYsLTEyMzc0MTA1MzQsMj
-A5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQy
-MzI2NjA2NV19
+eyJoaXN0b3J5IjpbMTI1OTU5NDAzMiwtMTIzNzQxMDUzNCwyMD
+k5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIz
+MjY2MDY1XX0=
 -->
