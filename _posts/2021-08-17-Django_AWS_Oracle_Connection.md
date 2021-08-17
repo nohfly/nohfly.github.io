@@ -41,10 +41,10 @@ python manage.py shell
 애러가 난다...
 
 Oracle DB와의 32-bit/64-bit 불일치 문제가 아니라면 Oracle Instant Client를 설치하지 않았거나, 설치는 했으나 cx_Oracle에서 해당 경로를 인식하지 못해서 발생하는 문제이다.
-```
-[Oracle Instant Client 다운로드](https://www.oracle.com/database/technologies/instant-client/downloads.html)
+
+[`Oracle Instant Client 다운로드`](https://www.oracle.com/database/technologies/instant-client/downloads.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3NzgyMDQwLC0xMjM3NDEwNTM0LDIwOT
+eyJoaXN0b3J5IjpbMjAyOTk5MDg0LC0xMjM3NDEwNTM0LDIwOT
 kzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMy
 NjYwNjVdfQ==
 -->
