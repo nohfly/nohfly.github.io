@@ -8,6 +8,7 @@ published: true
 ---
 
 ## settings.py 설정
+Oracle DB endpoint 정보 'HOST'에 입력
 ```python
 DATABASES = {
 	'default': {
@@ -20,7 +21,8 @@ DATABASES = {
 	}
 }
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzEzMTQ5NDYsMjA5OTMwNzA2OSwtMj
-A0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbMTQxOTM1OTIyOCwyMDk5MzA3MDY5LC0yMD
+Q0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2MDY1XX0=
 -->
