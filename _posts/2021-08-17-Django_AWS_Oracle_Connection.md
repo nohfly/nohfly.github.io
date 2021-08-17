@@ -88,9 +88,11 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 	+ 다시 `cursor = connection.cursor()`로 connection 여부를 확인하면 애러 메시지가 출력되지 않는 것을 확인할 수 있다.
 
 		[참조] [Python에서 Oracle 사용하기 (for Mac OS X)](https://davelogs.tistory.com/23)	
+		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)   
+		[참조] [Python에서 Oracle 사용하기 (for Mac OS X)](https://davelogs.tistory.com/23)  
 		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MzA5MDUxOCw3MTM5NzU3MCw1ODU2Nz
+eyJoaXN0b3J5IjpbMTI4OTcxODAwNCw3MTM5NzU3MCw1ODU2Nz
 Q2MzgsMjAyOTk5MDg0LC0xMjM3NDEwNTM0LDIwOTkzMDcwNjks
 LTIwNDQwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMyNjYwNjVdfQ
 ==
