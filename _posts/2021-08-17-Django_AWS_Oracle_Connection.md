@@ -43,8 +43,10 @@ python manage.py shell
 Oracle DB와의 32-bit/64-bit 불일치 문제가 아니라면 Oracle Instant Client를 설치하지 않았거나, 설치는 했으나 cx_Oracle에서 해당 경로를 인식하지 못해서 발생하는 문제이다.
 
 [`Oracle Instant Client 다운로드`](https://www.oracle.com/database/technologies/instant-client/downloads.html)
+
+위의 경로에서 OS에 맞게 해당 라이브러리를 다운받고, [enter link description here](https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#installing-cx-oracle-on-macos-intel-x86)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyOTk5MDg0LC0xMjM3NDEwNTM0LDIwOT
-kzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMy
-NjYwNjVdfQ==
+eyJoaXN0b3J5IjpbLTIwMDEyMDUxNTcsMjAyOTk5MDg0LC0xMj
+M3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4
+ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
