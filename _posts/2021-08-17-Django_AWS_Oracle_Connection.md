@@ -7,10 +7,20 @@ tags:
 published: true
 ---
 
-## asdasdA New Post
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+## settings.py 설정
+'''
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.oracle',  
+  'NAME': 'ORCL',  
+  'USER': 'admin',  
+  'PASSWORD': 'qkffprtm123',  
+  'HOST': 'vs-dev-seoul-oracle-se2.c3vdxjip5vfb.ap-northeast-2.rds.amazonaws.com',  
+  'PORT': '1521'  
+  }  
+}
+'''
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU1MzU0NDY1LC0yMDQ0MDE2OTA5LC0xOD
-M3ODg2NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbMjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMT
+gzNzg4NjQ3NywtMTQyMzI2NjA2NV19
 -->
