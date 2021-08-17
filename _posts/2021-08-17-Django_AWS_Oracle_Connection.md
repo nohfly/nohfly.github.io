@@ -28,8 +28,13 @@ DATABASES = {
 conda install cx_oracle
 ```
 
-+ **connection 확인**
++ **connection 여부 확인**
+```
+python manage.py shell
+>>> from django.db import connection
+>>> cursor = connection.cursor()
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMTIyNzAyMiwyMDk5MzA3MDY5LC0yMD
-Q0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbLTEyMzc0MTA1MzQsMjA5OTMwNzA2OSwtMj
+A0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
 -->
