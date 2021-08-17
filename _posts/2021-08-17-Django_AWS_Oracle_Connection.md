@@ -22,13 +22,14 @@ DATABASES = {
 }
 ```
 Django 프로젝트 내 settings.py 안에서 'DATABASES' 항목을 작성한다. AWS RDS DB 인스턴스에 접근할 경우, host ip가 변경될 수도 있기 때문에 Endpoint 경로를 입력한다.
-
+---
 + **cx_Oracle 설치**
 ```
 conda install cx_Oracle
 ```
 django.db.backends.oracle은 cx_Oracle을 사용하기에 별도로 라이브러리를 설치해준다.
 
+---
 + **connection 여부 확인**
 ```
 python manage.py shell
@@ -36,6 +37,9 @@ python manage.py shell
 >>> cursor = connection.cursor()
 ```
 설정한 DATABASE에 잘 접근하는지 확인한다.
+
+---
++ **Oracle Instant Client 설정**
 > django.db.utils.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 1): image not found". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
 
 애러가 난다...
@@ -52,7 +56,7 @@ import cx_Oracle
 cx_Oracle.init_oracle_client(lib_dir="/Users/your_username/Downloads/instantclient_19_8")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQyMDA2Nzk2LDIwMjk5OTA4NCwtMTIzNz
-QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
-NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbLTEzNjQyOTc5NTcsMjAyOTk5MDg0LC0xMj
+M3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4
+ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
