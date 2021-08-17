@@ -4,6 +4,9 @@ categories:
  - Django
 tags:
  - Django
+ - Oracle
+ - cx_Oracle
+ - Oracle Instant Client
 published: true
 ---
 
@@ -91,8 +94,8 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2Mjk2OTY5NiwyMjQzMTE1MzQsLTcxOT
-IyODE1OCw3MTM5NzU3MCw1ODU2NzQ2MzgsMjAyOTk5MDg0LC0x
-MjM3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mz
-c4ODY0NzcsLTE0MjMyNjYwNjVdfQ==
+eyJoaXN0b3J5IjpbMTI2NDI2MDEzMywxOTYyOTY5Njk2LDIyND
+MxMTUzNCwtNzE5MjI4MTU4LDcxMzk3NTcwLDU4NTY3NDYzOCwy
+MDI5OTkwODQsLTEyMzc0MTA1MzQsMjA5OTMwNzA2OSwtMjA0ND
+AxNjkwOSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
 -->
