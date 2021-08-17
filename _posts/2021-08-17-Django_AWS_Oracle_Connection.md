@@ -65,9 +65,9 @@ try:
 except ImportError as e:  
     raise ImproperlyConfigured("Error loading cx_Oracle module: %s" % e)
 ```
-Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 이
+Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당 코드를 직접 수정하지 않는 이상 불가능해 보인다. 때문에 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTI4NzA2OTMsMjAyOTk5MDg0LC0xMj
-M3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4
-ODY0NzcsLTE0MjMyNjYwNjVdfQ==
+eyJoaXN0b3J5IjpbMTI0ODY4MjE5LDIwMjk5OTA4NCwtMTIzNz
+QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
+NDc3LC0xNDIzMjY2MDY1XX0=
 -->
