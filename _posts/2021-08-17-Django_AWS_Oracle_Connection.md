@@ -74,9 +74,13 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		```
 		/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
 		```
-	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가들 복사되며, 
+	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
+		```
+		sudo mkdir /usr/local/oracle
+		sudo mv ~/Downloadinstantclient_19_3 /usr/local/oracle
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDE1OTg2NzIsNTg1Njc0NjM4LDIwMj
-k5OTA4NCwtMTIzNzQxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2
-OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbLTcyODE5MzExNyw1ODU2NzQ2MzgsMjAyOT
+k5MDg0LC0xMjM3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5
+MDksLTE4Mzc4ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
