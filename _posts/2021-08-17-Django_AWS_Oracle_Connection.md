@@ -71,9 +71,11 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 + **Oracle Instant Client 설정 (macOS)**
 	+ [Oracle](https://www.oracle.com/database/technologies/instant-client/macos-intel-x86-downloads.html)에서 Basic 64-bit DMG를 다운 받은 후 마운트 한다.
 	+ 터미널에서 아래 설치 스크립트를 실행한다.
-/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
+	```
+	asd
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMjgwNzE1MywyMDI5OTkwODQsLTEyMz
+eyJoaXN0b3J5IjpbMTUyNDY3OTQyNSwyMDI5OTkwODQsLTEyMz
 c0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4
 NjQ3NywtMTQyMzI2NjA2NV19
 -->
