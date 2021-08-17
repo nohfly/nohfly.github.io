@@ -52,14 +52,16 @@ Oracle DB와의 32-bit/64-bit 불일치 문제가 아니라면 Oracle Instant Cl
 
 위의 경로에서 OS에 맞게 해당 라이브러리를 다운받고, [*cx_Oracle 8 Installation*](https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#) 설명에 따라 라이브러리를 설정한다.
 
-
 ```python
 import cx_Oracle
 cx_Oracle.init_oracle_client(lib_dir="/Users/your_username/Downloads/instantclient_19_8")
 ```
-라이브러리 경로를 파이선 실행 코드 내에서 한번 설정해줘야한다고 하는데,
+macOS의 경우, 위와 같이 Oracle Instant Client 다운로드 후 해당 라이브러리 경로를 파이선 실행 코드 내에서 한번 설정해줘야한다고 하는데,
+```
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MjE3MzM2MywyMDI5OTkwODQsLTEyMz
-c0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4
-NjQ3NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbMzUxMDYyMDcxLDIwMjk5OTA4NCwtMTIzNz
+QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
+NDc3LC0xNDIzMjY2MDY1XX0=
 -->
