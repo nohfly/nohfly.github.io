@@ -39,8 +39,10 @@ python manage.py shell
 > django.db.utils.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 1): image not found". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
 
 애러가 난다...
+
+Oracle DB와의 32-bit/64-bit 불일치 문제가 아니라면 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MDYyMTUzMSwtMTIzNzQxMDUzNCwyMD
-k5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIz
-MjY2MDY1XX0=
+eyJoaXN0b3J5IjpbNjI0MjA2NjAxLC0xMjM3NDEwNTM0LDIwOT
+kzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMy
+NjYwNjVdfQ==
 -->
