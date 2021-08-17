@@ -14,10 +14,10 @@ published: true
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.oracle',
-		'NAME': '***',
+		'NAME': '***',  # SID
 		'USER': '***',
 		'PASSWORD': '***',
-		'HOST': 'asdf.qwer.ap-northeast-2.rds.amazonaws.com',
+		'HOST': 'asdf.qwer.ap-northeast-2.rds.amazonaws.com',  # Endpoint 또는 host명
 		'PORT': '1521'
 	}
 }
@@ -35,6 +35,7 @@ python manage.py shell
 >>> cursor = connection.cursor()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzc0MTA1MzQsMjA5OTMwNzA2OSwtMj
-A0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbOTI1MzUxNzY0LC0xMjM3NDEwNTM0LDIwOT
+kzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMy
+NjYwNjVdfQ==
 -->
