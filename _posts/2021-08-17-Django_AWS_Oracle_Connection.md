@@ -74,9 +74,9 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		```
 		/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
 		```
-	+ 기본
+	+ 기본으로 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYwNDk5OCwyMDI5OTkwODQsLTEyMzc0MT
-A1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4NjQ3
-NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbNTg1Njc0NjM4LDIwMjk5OTA4NCwtMTIzNz
+QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
+NDc3LC0xNDIzMjY2MDY1XX0=
 -->
