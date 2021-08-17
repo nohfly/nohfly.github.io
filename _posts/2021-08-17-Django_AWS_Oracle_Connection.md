@@ -69,9 +69,9 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 
 ---
 + **Oracle Instant Client 설정 (macOS)**
-
+	+ [Oracle](https://www.oracle.com/database/technologies/instant-client/macos-intel-x86-downloads.html)에서 *Basic** 64-bit DMG
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY4NTE3NzM2LDIwMjk5OTA4NCwtMTIzNz
-QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
-NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbMTE3Mjk0MzA2MywyMDI5OTkwODQsLTEyMz
+c0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4
+NjQ3NywtMTQyMzI2NjA2NV19
 -->
