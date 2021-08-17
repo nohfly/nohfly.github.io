@@ -81,11 +81,13 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		```
 	+ `/usr/local/lib`으로 심볼릭 링크를 설정한다.
 		```
-		ln -sf /usr/local/oracle/instantclient_19_3/*.dylib /usr/local/lib/
-		sudo mv ~/Downloads/instantclient_19_8 /usr/local/oracle
+		ln -sf /usr/local/oracle/instantclient_19_8/*.dylib /usr/local/lib/
+		ln -sf /usr/local/oracle/instantclient_19_8/*.dylib.19.1 /usr/local/lib/
+		ln -sf /usr/local/oracle/instantclient_19_8/libclntsh.dylib.19.1 /usr/local/lib/libclntsh.dylib
 		```
+		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMTAxMTkwNyw1ODU2NzQ2MzgsMjAyOT
-k5MDg0LC0xMjM3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5
-MDksLTE4Mzc4ODY0NzcsLTE0MjMyNjYwNjVdfQ==
+eyJoaXN0b3J5IjpbNDI0ODQ3MTU5LDU4NTY3NDYzOCwyMDI5OT
+kwODQsLTEyMzc0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkw
+OSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
 -->
