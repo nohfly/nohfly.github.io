@@ -85,9 +85,10 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		ln -sf /usr/local/oracle/instantclient_19_8/*.dylib.19.1 /usr/local/lib/
 		ln -sf /usr/local/oracle/instantclient_19_8/libclntsh.dylib.19.1 /usr/local/lib/libclntsh.dylib
 		```
-		
+	+ 다시 **ㅁㄴㅇ**
+		[참조] [Python에서 Oracle 사용하기 (for Mac OS X)](https://davelogs.tistory.com/23)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0ODQ3MTU5LDU4NTY3NDYzOCwyMDI5OT
-kwODQsLTEyMzc0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkw
-OSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbLTM4Mzk5NDk0OCw1ODU2NzQ2MzgsMjAyOT
+k5MDg0LC0xMjM3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5
+MDksLTE4Mzc4ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
