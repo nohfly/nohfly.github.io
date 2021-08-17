@@ -77,10 +77,15 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
 		```
 		sudo mkdir /usr/local/oracle
-		sudo mv ~/Downloadinstantclient_19_3 /usr/local/oracle
+		sudo mv ~/Downloads/instantclient_19_8 /usr/local/oracle
+		```
+	+ `/usr/local/lib`으로 심볼릭 링크를 설정한다.
+		```
+		ln -sf /usr/local/oracle/instantclient_19_3/*.dylib /usr/local/lib/
+		sudo mv ~/Downloads/instantclient_19_8 /usr/local/oracle
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyODE5MzExNyw1ODU2NzQ2MzgsMjAyOT
+eyJoaXN0b3J5IjpbLTkwMTAxMTkwNyw1ODU2NzQ2MzgsMjAyOT
 k5MDg0LC0xMjM3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5
 MDksLTE4Mzc4ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
