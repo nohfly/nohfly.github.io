@@ -57,11 +57,16 @@ import cx_Oracle
 cx_Oracle.init_oracle_client(lib_dir="/Users/your_username/Downloads/instantclient_19_8")
 ```
 macOS의 경우, 위와 같이 Oracle Instant Client 다운로드 후 해당 라이브러리 경로를 파이선 실행 코드 내에서 한번 설정해줘야한다고 하는데,
-```
+```python
+# .../lib/python3.7/site-packages/django/db/backends/oracle/base.py
 
+try:  
+    import cx_Oracle as Database  
+except ImportError as e:  
+    raise ImproperlyConfigured("Error loading cx_Oracle module: %s" % e)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxMDYyMDcxLDIwMjk5OTA4NCwtMTIzNz
-QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
-NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbLTEwNjg2OTc2MTQsMjAyOTk5MDg0LC0xMj
+M3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4
+ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
