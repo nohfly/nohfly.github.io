@@ -33,7 +33,7 @@ django.db.backends.oracle은 cx_Oracle을 사용하기에 별도로 라이브러
 
 ---
 + **connection 여부 확인**
-```
+```python
 python manage.py shell
 >>> from django.db import connection
 >>> cursor = connection.cursor()
@@ -65,8 +65,9 @@ try:
 except ImportError as e:  
     raise ImproperlyConfigured("Error loading cx_Oracle module: %s" % e)
 ```
+Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 이
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjg2OTc2MTQsMjAyOTk5MDg0LC0xMj
+eyJoaXN0b3J5IjpbLTIwMTI4NzA2OTMsMjAyOTk5MDg0LC0xMj
 M3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4
 ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
