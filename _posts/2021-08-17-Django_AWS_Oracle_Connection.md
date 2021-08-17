@@ -23,7 +23,8 @@ DATABASES = {
 }
 ```
 
-+ **cx_oracle 설치**
++ **cx_Oracle 설치**
+django.db.backends.oracle은 cx_Oracle을 사용하기에 별도로 라이브러리를 설치해준다.
 ```
 conda install cx_oracle
 ```
@@ -35,7 +36,7 @@ python manage.py shell
 >>> cursor = connection.cursor()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1OTU5NDAzMiwtMTIzNzQxMDUzNCwyMD
-k5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIz
-MjY2MDY1XX0=
+eyJoaXN0b3J5IjpbLTIwNzM3MzA1OTMsLTEyMzc0MTA1MzQsMj
+A5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQy
+MzI2NjA2NV19
 -->
