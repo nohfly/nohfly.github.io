@@ -44,9 +44,11 @@ Oracle DB와의 32-bit/64-bit 불일치 문제가 아니라면 Oracle Instant Cl
 
 [`Oracle Instant Client 다운로드`](https://www.oracle.com/database/technologies/instant-client/downloads.html)
 
-위의 경로에서 OS에 맞게 해당 라이브러리를 다운받고, [*cx_Oracle 8 Installation*](https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#) 설명에 따라 
+위의 경로에서 OS에 맞게 해당 라이브러리를 다운받고, [*cx_Oracle 8 Installation*](https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#) 설명에 따라 라이브러리를 설정한다.
+
+매
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4OTQ1NzEyLDIwMjk5OTA4NCwtMTIzNz
-QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
-NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbLTExNjU5MDM5MzUsMjAyOTk5MDg0LC0xMj
+M3NDEwNTM0LDIwOTkzMDcwNjksLTIwNDQwMTY5MDksLTE4Mzc4
+ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
