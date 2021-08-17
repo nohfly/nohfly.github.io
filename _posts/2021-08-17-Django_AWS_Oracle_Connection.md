@@ -7,9 +7,9 @@ tags:
 published: true
 ---
 
-## 
-+ settings.py 설정
-Oracle DB endpoint 정보 'HOST'에 입력
+## Oracle DB Connection 정보 설정
++ **settings.py 설정**
+*Oracle DB endpoint 정보 'HOST'에 입력*
 ```python
 DATABASES = {
 	'default': {
@@ -22,11 +22,12 @@ DATABASES = {
 	}
 }
 ```
-## cx_oracle 설치
++ **cx_oracle 설치**
 ```
 conda install cx_oracle
 ```
+> co
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE3Njc1ODI5LDIwOTkzMDcwNjksLTIwND
+eyJoaXN0b3J5IjpbODI4MzA4NDU2LDIwOTkzMDcwNjksLTIwND
 QwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMyNjYwNjVdfQ==
 -->
