@@ -22,12 +22,14 @@ DATABASES = {
 	}
 }
 ```
+
 + **cx_oracle 설치**
 ```
 conda install cx_oracle
 ```
-> co
+
++ **connection 확인**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI4MzA4NDU2LDIwOTkzMDcwNjksLTIwND
-QwMTY5MDksLTE4Mzc4ODY0NzcsLTE0MjMyNjYwNjVdfQ==
+eyJoaXN0b3J5IjpbMjAzMTIyNzAyMiwyMDk5MzA3MDY5LC0yMD
+Q0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2MDY1XX0=
 -->
