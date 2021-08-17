@@ -7,9 +7,10 @@ tags:
 published: true
 ---
 
-## settings.py 설정
+
+1. settings.py 설정
 Oracle DB endpoint 정보 'HOST'에 입력
-```python
+	```python
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.oracle',
@@ -22,8 +23,10 @@ DATABASES = {
 }
 ```
 ## cx_oracle 설치
-
+```
+conda install cx_oracle
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDI1OTQ4MjIsMjA5OTMwNzA2OSwtMj
-A0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbLTE2ODY1NDQxMywyMDk5MzA3MDY5LC0yMD
+Q0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2MDY1XX0=
 -->
