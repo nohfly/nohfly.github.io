@@ -42,7 +42,9 @@ python manage.py shell
 
 ---
 + **Oracle Instant Client 설정**
-> django.db.utils.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 1): image not found". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help   
+```
+django.db.utils.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 1): image not found". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
+```
 애러가 난다...
 
 Oracle DB와의 32-bit/64-bit 불일치 문제가 아니라면 Oracle Instant Client를 설치하지 않았거나, 설치는 했으나 cx_Oracle에서 해당 경로를 인식하지 못해서 발생하는 문제이다.
@@ -90,7 +92,7 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3ODE5MDg4MiwtNzE5MjI4MTU4LDcxMz
+eyJoaXN0b3J5IjpbLTc1MDM1OTE1OCwtNzE5MjI4MTU4LDcxMz
 k3NTcwLDU4NTY3NDYzOCwyMDI5OTkwODQsLTEyMzc0MTA1MzQs
 MjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMT
 QyMzI2NjA2NV19
