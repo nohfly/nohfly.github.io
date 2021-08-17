@@ -65,9 +65,9 @@ try:
 except ImportError as e:  
     raise ImproperlyConfigured("Error loading cx_Oracle module: %s" % e)
 ```
-Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당 코드를 직접 수정하지 않는 이상 불가능해 보인다. 때문에 
+Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당 코드를 직접 수정하지 않는 이상 불가능해 보인다. 때문에 차선책으로 직접 Oracle Instant Client 라이브러리를 cx_Oracle이 인식할 수 있는 `/usr/local/lib`으로 옯겨준다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0ODY4MjE5LDIwMjk5OTA4NCwtMTIzNz
-QxMDUzNCwyMDk5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2
-NDc3LC0xNDIzMjY2MDY1XX0=
+eyJoaXN0b3J5IjpbMTAxMTk4ODkzNSwyMDI5OTkwODQsLTEyMz
+c0MTA1MzQsMjA5OTMwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4
+NjQ3NywtMTQyMzI2NjA2NV19
 -->
