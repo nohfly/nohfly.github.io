@@ -7,7 +7,7 @@ tags:
 published: true
 ---
 
-## Oracle DB Connection 정보 설정
+## Django - Oracle DB 연동
 + **settings.py 설정**
 ```python
 DATABASES = {
@@ -25,7 +25,7 @@ Django 프로젝트 내 settings.py 안에서 'DATABASES' 항목을 작성한다
 
 + **cx_Oracle 설치**
 ```
-conda install cx_oracle
+conda install cx_Oracle
 ```
 django.db.backends.oracle은 cx_Oracle을 사용하기에 별도로 라이브러리를 설치해준다.
 
@@ -36,9 +36,11 @@ python manage.py shell
 >>> cursor = connection.cursor()
 ```
 설정한 DATABASE에 잘 접근하는지 확인한다.
+> django.db.utils.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(libclntsh.dylib, 1): image not found". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
 
+애러가 난다...
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNDI1OTA4NywtMTIzNzQxMDUzNCwyMD
+eyJoaXN0b3J5IjpbLTM1MDYyMTUzMSwtMTIzNzQxMDUzNCwyMD
 k5MzA3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIz
 MjY2MDY1XX0=
 -->
