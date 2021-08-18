@@ -33,7 +33,36 @@ The lookup parameters (`**kwargs`) should be in the format described in  [Field 
 If you need to execute more complex queries (for example, queries with  `OR`  statements), you can use  [`Q  objects`](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#django.db.models.Q "django.db.models.Q").
 
 ---
+### `exclude()`
 
+`exclude`(_**kwargs_)
+
+Returns a new  `QuerySet`  containing objects that do  _not_  match the given lookup parameters.
+
+The lookup parameters (`**kwargs`) should be in the format described in  [Field lookups](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#id4)  below. Multiple parameters are joined via  `AND`  in the underlying SQL statement, and the whole thing is enclosed in a  `NOT()`.
+
+This example excludes all entries whose  `pub_date`  is later than 2005-1-3 AND whose  `headline`  is “Hello”:
+```python
+Entry.objects.exclude(pub_date__gt=datetime.date(2005, 1, 3), headline='Hello')
+```
+In SQL terms, that evaluates to:
+```sql
+SELECT ...
+WHERE NOT (pub_date > '2005-1-3' AND headline = 'Hello')
+```
+This example excludes all entries whose  `pub_date`  is later than 2005-1-3 OR whose headline is “Hello”:
+```python
+Entry.objects.exclude(pub_date__gt=datetime.date(2005, 1, 3)).exclude(headline='Hello')
+```
+In SQL terms, that evaluates to:
+```sql
+SELECT ...
+WHERE NOT pub_date > '2005-1-3'
+AND NOT headline = 'Hello'
+```
+Note the second example is more restrictive.
+
+If you need to execute more complex queries (for example, queries with  `OR`  statements), you can use  [`Q  objects`](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#django.db.models.Q "django.db.models.Q").
 
 ---
 ### `values()`
@@ -164,7 +193,7 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NzQ2MDA1NiwtMjgzNDQyNzE4LDc1Mj
-U5NDk1NSwxMzQ3ODQ1Nzc4LDcxMjQyMDM4MiwtMTU4OTM0MDI4
-Ml19
+eyJoaXN0b3J5IjpbNTg2MTUyNzA1LC0yODM0NDI3MTgsNzUyNT
+k0OTU1LDEzNDc4NDU3NzgsNzEyNDIwMzgyLC0xNTg5MzQwMjgy
+XX0=
 -->
