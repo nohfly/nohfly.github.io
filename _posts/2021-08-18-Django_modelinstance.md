@@ -5,6 +5,7 @@ categories:
 tags:
  - Django
  - Django model
+ - Django QuerySet
 published: true
 ---
 
@@ -249,7 +250,7 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4OTQ2MDQ0MywtMTMyNjM5MzcxOSw1OD
+eyJoaXN0b3J5IjpbLTIyNzE2NDkzNSwtMTMyNjM5MzcxOSw1OD
 YxNTI3MDUsLTI4MzQ0MjcxOCw3NTI1OTQ5NTUsMTM0Nzg0NTc3
 OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ==
 -->
