@@ -87,36 +87,36 @@ This is equivalent to the following SQL  `WHERE`  clause:
 WHERE question LIKE 'Who%' OR question LIKE 'What%'
 ```
 You can compose statements of arbitrary complexity by combining  `Q`  objects with the  `&`  and  `|`  operators and use parenthetical grouping. Also,  `Q`  objects can be negated using the  `~`  operator, allowing for combined lookups that combine both a normal query and a negated (`NOT`) query:
-
+```python
 Q(question__startswith='Who') | ~Q(pub_date__year=2005)
-
+```
 Each lookup function that takes keyword-arguments (e.g.  [`filter()`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.filter "django.db.models.query.QuerySet.filter"),  [`exclude()`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.exclude "django.db.models.query.QuerySet.exclude"),  [`get()`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.get "django.db.models.query.QuerySet.get")) can also be passed one or more  `Q`objects as positional (not-named) arguments. If you provide multiple  `Q`  object arguments to a lookup function, the arguments will be “AND”ed together. For example:
-
+```python
 Poll.objects.get(
     Q(question__startswith='Who'),
     Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6))
 )
-
+```
 … roughly translates into the SQL:
-
+```sql
 SELECT * from polls WHERE question LIKE 'Who%'
     AND (pub_date = '2005-05-02' OR pub_date = '2005-05-06')
-
+```
 Lookup functions can mix the use of  `Q`  objects and keyword arguments. All arguments provided to a lookup function (be they keyword arguments or  `Q`  objects) are “AND”ed together. However, if a  `Q`  object is provided, it must precede the definition of any keyword arguments. For example:
-
+```python
 Poll.objects.get(
     Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6)),
     question__startswith='Who',
 )
-
+```
 … would be a valid query, equivalent to the previous example; but:
-
+```python
 # INVALID QUERY
 Poll.objects.get(
     question__startswith='Who',
     Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6))
 )
-
+```
 … would not be valid.
 
 ---
@@ -248,7 +248,7 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYxMDkwODc5LDU4NjE1MjcwNSwtMjgzND
-QyNzE4LDc1MjU5NDk1NSwxMzQ3ODQ1Nzc4LDcxMjQyMDM4Miwt
-MTU4OTM0MDI4Ml19
+eyJoaXN0b3J5IjpbLTEzMjYzOTM3MTksNTg2MTUyNzA1LC0yOD
+M0NDI3MTgsNzUyNTk0OTU1LDEzNDc4NDU3NzgsNzEyNDIwMzgy
+LC0xNTg5MzQwMjgyXX0=
 -->
