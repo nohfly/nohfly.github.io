@@ -127,7 +127,22 @@ Entry.objects.filter(id=10).update(comments_on=False)
 Using  `update()`  also prevents a race condition wherein something might change in your database in the short period of time between loading the object and calling  `save()`.
 
 ---
+### `delete()`
+
+`delete`()
+
+Performs an SQL delete query on all rows in the  [`QuerySet`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet "django.db.models.query.QuerySet")  and returns the number of objects deleted and a dictionary with the number of deletions per object type.
+
+The  `delete()`  is applied instantly. You cannot call  `delete()`  on a  [`QuerySet`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet "django.db.models.query.QuerySet")  that has had a slice taken or can otherwise no longer be filtered.
+
+For example, to delete all the entries in a particular blog:
+
+>>> b = Blog.objects.get(pk=1)
+
+# Delete all the entries belonging to this Blog.
+>>> Entry.objects.filter(blog=b).delete()
+(4, {'weblog.Entry': 2, 'weblog.Entry_authors': 2})
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyNTk0OTU1LDEzNDc4NDU3NzgsNzEyND
-IwMzgyLC0xNTg5MzQwMjgyXX0=
+eyJoaXN0b3J5IjpbMTMyOTk2NDc0MSw3NTI1OTQ5NTUsMTM0Nz
+g0NTc3OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ==
 -->
