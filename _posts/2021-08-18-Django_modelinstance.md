@@ -20,6 +20,18 @@ Entry.objects.get(blog=blog, entry_number=1)
 ```
 
 ---
+### `filter()`
+
+`filter`(_**kwargs_)
+
+Returns a new  `QuerySet`  containing objects that match the given lookup parameters.
+```python
+`
+The lookup parameters (`**kwargs`) should be in the format described in  [Field lookups](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#id4)  below. Multiple parameters are joined via  `AND`  in the underlying SQL statement.
+
+If you need to execute more complex queries (for example, queries with  `OR`  statements), you can use  [`Q  objects`](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#django.db.models.Q "django.db.models.Q").
+
+---
 ### `values()`
 
 `values`(_*fields_,  _**expressions_)
@@ -148,6 +160,7 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MzQ0MjcxOCw3NTI1OTQ5NTUsMTM0Nz
-g0NTc3OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ==
+eyJoaXN0b3J5IjpbNzkwNDA4NTQxLC0yODM0NDI3MTgsNzUyNT
+k0OTU1LDEzNDc4NDU3NzgsNzEyNDIwMzgyLC0xNTg5MzQwMjgy
+XX0=
 -->
