@@ -104,7 +104,7 @@ Filtering based on related fields is still possible, though:
 You cannot call  `update()`  on a  [`QuerySet`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet "django.db.models.query.QuerySet")  that has had a slice taken or can otherwise no longer be filtered.
 
 The  `update()`  method returns the number of affected rows:
-
+```python
 >>> Entry.objects.filter(id=64).update(comments_on=True)
 1
 
@@ -113,19 +113,21 @@ The  `update()`  method returns the number of affected rows:
 
 >>> Entry.objects.filter(pub_date__year=2010).update(comments_on=False)
 132
-
+```
 If you’re just updating a record and don’t need to do anything with the model object, the most efficient approach is to call  `update()`, rather than loading the model object into memory. For example, instead of doing this:
-
+```python
 e = Entry.objects.get(id=10)
 e.comments_on = False
 e.save()
-
+```
 …do this:
-
+```python
 Entry.objects.filter(id=10).update(comments_on=False)
-
+```
 Using  `update()`  also prevents a race condition wherein something might change in your database in the short period of time between loading the object and calling  `save()`.
+
+---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAzMzkzNzkyLDEzNDc4NDU3NzgsNzEyND
+eyJoaXN0b3J5IjpbNzUyNTk0OTU1LDEzNDc4NDU3NzgsNzEyND
 IwMzgyLC0xNTg5MzQwMjgyXX0=
 -->
