@@ -59,8 +59,26 @@ Entry.objects.get(blog=blog, entry_number=1)
 ```
 
 ---
+### `create()`
+
+`create`(_**kwargs_)
+
+A convenience method for creating an object and saving it all in one step. Thus:
+```python
+p = Person.objects.create(first_name="Bruce", last_name="Springsteen")
+```
+and:
+```python
+p = Person(first_name="Bruce", last_name="Springsteen")
+p.save(force_insert=True)
+```
+are equivalent.
+
+The  [force_insert](https://docs.djangoproject.com/en/3.1/ref/models/instances/#ref-models-force-insert)  parameter is documented elsewhere, but all it means is that a new object will always be created. Normally you won’t need to worry about this. However, if your model contains a manual primary key value that you set and if that value already exists in the database, a call to  `create()`  will fail with an  [`IntegrityError`](https://docs.djangoproject.com/en/3.1/ref/exceptions/#django.db.IntegrityError "django.db.IntegrityError")  since primary keys must be unique. Be prepared to handle the exception if you are using manual primary keys.
+
+---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDI3MzY1NjUsNzEyNDIwMzgyLC0xNT
-g5MzQwMjgyXX0=
+eyJoaXN0b3J5IjpbMTM0Nzg0NTc3OCw3MTI0MjAzODIsLTE1OD
+kzNDAyODJdfQ==
 -->
