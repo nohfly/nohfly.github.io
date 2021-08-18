@@ -48,7 +48,19 @@ Example:
 ```
 
 ---
+### `get()`
+
+`get`(_**kwargs_)
+
+Returns the object matching the given lookup parameters, which should be in the format described in  [Field lookups](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#id4). You should use lookups that are guaranteed unique, such as the primary key or fields in a unique constraint. For example:
+```python
+Entry.objects.get(id=1)
+Entry.objects.get(blog=blog, entry_number=1)
+```
+
+---
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEyNDIwMzgyLC0xNTg5MzQwMjgyXX0=
+eyJoaXN0b3J5IjpbLTE4MDI3MzY1NjUsNzEyNDIwMzgyLC0xNT
+g5MzQwMjgyXX0=
 -->
