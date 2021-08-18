@@ -77,8 +77,55 @@ are equivalent.
 The  [force_insert](https://docs.djangoproject.com/en/3.1/ref/models/instances/#ref-models-force-insert)  parameter is documented elsewhere, but all it means is that a new object will always be created. Normally you won’t need to worry about this. However, if your model contains a manual primary key value that you set and if that value already exists in the database, a call to  `create()`  will fail with an  [`IntegrityError`](https://docs.djangoproject.com/en/3.1/ref/exceptions/#django.db.IntegrityError "django.db.IntegrityError")  since primary keys must be unique. Be prepared to handle the exception if you are using manual primary keys.
 
 ---
+#### `update()`[¶](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#update "Permalink to this headline")
 
+`update`(_**kwargs_)[¶](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.update "Permalink to this definition")
+
+Performs an SQL update query for the specified fields, and returns the number of rows matched (which may not be equal to the number of rows updated if some rows already have the new value).
+
+For example, to turn comments off for all blog entries published in 2010, you could do this:
+
+>>> Entry.objects.filter(pub_date__year=2010).update(comments_on=False)
+
+(This assumes your  `Entry`  model has fields  `pub_date`  and  `comments_on`.)
+
+You can update multiple fields — there’s no limit on how many. For example, here we update the  `comments_on`  and  `headline`fields:
+
+>>> Entry.objects.filter(pub_date__year=2010).update(comments_on=False, headline='This is old')
+
+The  `update()`  method is applied instantly, and the only restriction on the  [`QuerySet`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet "django.db.models.query.QuerySet")  that is updated is that it can only update columns in the model’s main table, not on related models. You can’t do this, for example:
+
+>>> Entry.objects.update(blog__name='foo') # Won't work!
+
+Filtering based on related fields is still possible, though:
+
+>>> Entry.objects.filter(blog__id=1).update(comments_on=True)
+
+You cannot call  `update()`  on a  [`QuerySet`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet "django.db.models.query.QuerySet")  that has had a slice taken or can otherwise no longer be filtered.
+
+The  `update()`  method returns the number of affected rows:
+
+>>> Entry.objects.filter(id=64).update(comments_on=True)
+1
+
+>>> Entry.objects.filter(slug='nonexistent-slug').update(comments_on=True)
+0
+
+>>> Entry.objects.filter(pub_date__year=2010).update(comments_on=False)
+132
+
+If you’re just updating a record and don’t need to do anything with the model object, the most efficient approach is to call  `update()`, rather than loading the model object into memory. For example, instead of doing this:
+
+e = Entry.objects.get(id=10)
+e.comments_on = False
+e.save()
+
+…do this:
+
+Entry.objects.filter(id=10).update(comments_on=False)
+
+Using  `update()`  also prevents a race condition wherein something might change in your database in the short period of time between loading the object and calling  `save()`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0Nzg0NTc3OCw3MTI0MjAzODIsLTE1OD
-kzNDAyODJdfQ==
+eyJoaXN0b3J5IjpbMTU2MDk3MDI0MywxMzQ3ODQ1Nzc4LDcxMj
+QyMDM4MiwtMTU4OTM0MDI4Ml19
 -->
