@@ -9,16 +9,6 @@ published: true
 ---
 
 ## Django Model Instance
-### `save()`
-
-If  `save()`  is passed a list of field names in keyword argument  `update_fields`, only the fields named in that list will be updated. This may be desirable if you want to update just one or a few fields on an object. There will be a slight performance benefit from preventing all of the model fields from being updated in the database. For example:
-```python
-product.name = 'Name changed again'
-product.save(update_fields=['name'])
-```
-The  `update_fields`  argument can be any iterable containing strings. An empty  `update_fields`  iterable will skip the save. A value of  `None`  will perform an update on all fields.
-
----
 ### `get()`
 
 `get`(_**kwargs_)
@@ -57,6 +47,18 @@ Example:
 >>> Blog.objects.values('id', 'name')
 <QuerySet [{'id': 1, 'name': 'Beatles Blog'}]>
 ```
+
+---
+### `save()`
+
+`save`(_**kwargs_)
+
+If  `save()`  is passed a list of field names in keyword argument  `update_fields`, only the fields named in that list will be updated. This may be desirable if you want to update just one or a few fields on an object. There will be a slight performance benefit from preventing all of the model fields from being updated in the database. For example:
+```python
+product.name = 'Name changed again'
+product.save(update_fields=['name'])
+```
+The  `update_fields`  argument can be any iterable containing strings. An empty  `update_fields`  iterable will skip the save. A value of  `None`  will perform an update on all fields.
 
 ---
 ### `create()`
@@ -146,6 +148,6 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzg1Mzk2NjMsNzUyNTk0OTU1LDEzND
-c4NDU3NzgsNzEyNDIwMzgyLC0xNTg5MzQwMjgyXX0=
+eyJoaXN0b3J5IjpbLTI4MzQ0MjcxOCw3NTI1OTQ5NTUsMTM0Nz
+g0NTc3OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ==
 -->
