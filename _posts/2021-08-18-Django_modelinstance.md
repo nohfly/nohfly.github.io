@@ -8,7 +8,7 @@ tags:
 published: true
 ---
 
-## Django Model Instance
+## Django Model Instance 정리
 ### `get()`
 
 `get`(_**kwargs_)
@@ -248,7 +248,7 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjYzOTM3MTksNTg2MTUyNzA1LC0yOD
-M0NDI3MTgsNzUyNTk0OTU1LDEzNDc4NDU3NzgsNzEyNDIwMzgy
-LC0xNTg5MzQwMjgyXX0=
+eyJoaXN0b3J5IjpbLTE2MDI1MjU2OTIsLTEzMjYzOTM3MTksNT
+g2MTUyNzA1LC0yODM0NDI3MTgsNzUyNTk0OTU1LDEzNDc4NDU3
+NzgsNzEyNDIwMzgyLC0xNTg5MzQwMjgyXX0=
 -->
