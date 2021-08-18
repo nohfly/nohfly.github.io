@@ -46,7 +46,9 @@ Example:
 >>> Blog.objects.values('id', 'name')
 <QuerySet [{'id': 1, 'name': 'Beatles Blog'}]>
 ```
-The  `values()`  method also takes optional keyword arguments,  `**expressions`, which are passed through to  [`annotate()`](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.annotate "django.db.models.query.QuerySet.annotate"):
+
+---
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY5MDk3MTc1LC0xNTg5MzQwMjgyXX0=
+eyJoaXN0b3J5IjpbNzEyNDIwMzgyLC0xNTg5MzQwMjgyXX0=
 -->
