@@ -8,7 +8,7 @@ tags:
 published: true
 ---
 
-## Django Model Instance 정리
+## Django QuerySet  API reference 정리
 
 ### `get()`
 
@@ -249,7 +249,7 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0NzA4MDU0LC0xMzI2MzkzNzE5LDU4Nj
-E1MjcwNSwtMjgzNDQyNzE4LDc1MjU5NDk1NSwxMzQ3ODQ1Nzc4
-LDcxMjQyMDM4MiwtMTU4OTM0MDI4Ml19
+eyJoaXN0b3J5IjpbMTg4OTQ2MDQ0MywtMTMyNjM5MzcxOSw1OD
+YxNTI3MDUsLTI4MzQ0MjcxOCw3NTI1OTQ5NTUsMTM0Nzg0NTc3
+OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ==
 -->
