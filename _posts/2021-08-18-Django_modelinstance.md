@@ -104,22 +104,10 @@ Poll.objects.get(
 SELECT * from polls WHERE question LIKE 'Who%'
     AND (pub_date = '2005-05-02' OR pub_date = '2005-05-06')
 ```
-Lookup functions can mix the use of  `Q`  objects and keyword arguments. All arguments provided to a lookup function (be they keyword arguments or  `Q`  objects) are “AND”ed together. However, if a  `Q`  object is provided, it must precede the definition of any keyword arguments. For example:
+**Q() 조건 연결**
 ```python
-Poll.objects.get(
-    Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6)),
-    question__startswith='Who',
-)
+
 ```
-… would be a valid query, equivalent to the previous example; but:
-```python
-# INVALID QUERY
-Poll.objects.get(
-    question__startswith='Who',
-    Q(pub_date=date(2005, 5, 2)) | Q(pub_date=date(2005, 5, 6))
-)
-```
-… would not be valid.
 
 ---
 ### `values()`
@@ -250,7 +238,8 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNzE2NDkzNSwtMTMyNjM5MzcxOSw1OD
-YxNTI3MDUsLTI4MzQ0MjcxOCw3NTI1OTQ5NTUsMTM0Nzg0NTc3
-OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ==
+eyJoaXN0b3J5IjpbLTE4OTk2OTg1OTMsLTIyNzE2NDkzNSwtMT
+MyNjM5MzcxOSw1ODYxNTI3MDUsLTI4MzQ0MjcxOCw3NTI1OTQ5
+NTUsMTM0Nzg0NTc3OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ
+==
 -->
