@@ -109,8 +109,9 @@ SELECT * from polls WHERE question LIKE 'Who%'
 from django.db.models import Q
 
 q = Q()
-q.add(Q(id='123'), q.OR)
-q.add(Q(name='john') | Q(name='
+q = Q()  
+q.add(Q(user_id=user_id) & Q(biz_site_cd=biz_site_cd), q.OR)
+q.add(Q(emp_type__in=['a','b',]pool_filter) & Q(biz_site_cd__isnull=True), q.OR)
 ```
 
 ---
@@ -242,7 +243,8 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1ODY0MTYxMCwtMjI3MTY0OTM1LC0xMz
-I2MzkzNzE5LDU4NjE1MjcwNSwtMjgzNDQyNzE4LDc1MjU5NDk1
-NSwxMzQ3ODQ1Nzc4LDcxMjQyMDM4MiwtMTU4OTM0MDI4Ml19
+eyJoaXN0b3J5IjpbLTE5Mjg1MjM4MTgsLTIyNzE2NDkzNSwtMT
+MyNjM5MzcxOSw1ODYxNTI3MDUsLTI4MzQ0MjcxOCw3NTI1OTQ5
+NTUsMTM0Nzg0NTc3OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ
+==
 -->
