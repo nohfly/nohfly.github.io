@@ -71,6 +71,19 @@ except ImportError as e:
 Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당 코드를 직접 수정하지 않는 이상 불가능해 보인다. 때문에 차선책으로 직접 Oracle Instant Client 라이브러리를 cx_Oracle이 인식할 수 있는 `/usr/local/lib`으로 옯겨준다.
 
 ---
++ **Oracle Instant Client 설정 (linux)**
+	+ [Oracle](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)에서 Basic 64-bit DMG를 다운 받은 후 마운트 한다.
+	+ 터미널에서 아래 설치 스크립트를 실행한다.
+		```
+		/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
+		```
+	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
+		```
+		sudo mkdir /usr/local/oracle
+		sudo mv ~/Downloads/instantclient_19_8 /usr/local/oracle
+		```
+
+---
 + **Oracle Instant Client 설정 (macOS)**
 	+ [Oracle](https://www.oracle.com/database/technologies/instant-client/macos-intel-x86-downloads.html)에서 Basic 64-bit DMG를 다운 받은 후 마운트 한다.
 	+ 터미널에서 아래 설치 스크립트를 실행한다.
@@ -94,8 +107,9 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDI2MDEzMywxOTYyOTY5Njk2LDIyND
-MxMTUzNCwtNzE5MjI4MTU4LDcxMzk3NTcwLDU4NTY3NDYzOCwy
-MDI5OTkwODQsLTEyMzc0MTA1MzQsMjA5OTMwNzA2OSwtMjA0ND
-AxNjkwOSwtMTgzNzg4NjQ3NywtMTQyMzI2NjA2NV19
+eyJoaXN0b3J5IjpbLTk0OTU5MjI0MCwxMjY0MjYwMTMzLDE5Nj
+I5Njk2OTYsMjI0MzExNTM0LC03MTkyMjgxNTgsNzEzOTc1NzAs
+NTg1Njc0NjM4LDIwMjk5OTA4NCwtMTIzNzQxMDUzNCwyMDk5Mz
+A3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2
+MDY1XX0=
 -->
