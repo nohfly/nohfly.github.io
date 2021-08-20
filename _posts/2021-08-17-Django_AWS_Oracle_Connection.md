@@ -72,10 +72,10 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 
 ---
 + **Oracle Instant Client 설정 (linux)**
-	+ [Oracle](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)에서 Basic 64-bit DMG를 다운 받은 후 마운트 한다.
+	+ [Oracle](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)에서 Basic 64-bit rpm을 다운 받는다.
 	+ 터미널에서 아래 설치 스크립트를 실행한다.
 		```
-		/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
+		sudo yum install oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
 		```
 	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
 		```
@@ -90,7 +90,7 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		```
 		/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
 		```
-	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
+	+ Instant Client 19 이전 버전일 ㄱ기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
 		```
 		sudo mkdir /usr/local/oracle
 		sudo mv ~/Downloads/instantclient_19_8 /usr/local/oracle
@@ -107,7 +107,7 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0OTU5MjI0MCwxMjY0MjYwMTMzLDE5Nj
+eyJoaXN0b3J5IjpbMjA0NjU2ODAxMiwxMjY0MjYwMTMzLDE5Nj
 I5Njk2OTYsMjI0MzExNTM0LC03MTkyMjgxNTgsNzEzOTc1NzAs
 NTg1Njc0NjM4LDIwMjk5OTA4NCwtMTIzNzQxMDUzNCwyMDk5Mz
 A3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2
