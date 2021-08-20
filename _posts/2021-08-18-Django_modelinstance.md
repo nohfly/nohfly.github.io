@@ -116,7 +116,7 @@ result = Employee.objects.filter(q)
 ```
 은 아래 sql문과 동일함.
 ```sql
-SELECT * FROM
+SELECT * FROM Employee WHERE (user_id='123' AND biz_site_cd='456') OR (emp_type IN ('a', 'b', 'c))
 ```
 
 ---
@@ -248,7 +248,7 @@ For example, to delete all the entries in a particular blog:
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzcyNzg3OTAsLTIyNzE2NDkzNSwtMT
+eyJoaXN0b3J5IjpbLTExNTM4MjIzOTgsLTIyNzE2NDkzNSwtMT
 MyNjM5MzcxOSw1ODYxNTI3MDUsLTI4MzQ0MjcxOCw3NTI1OTQ5
 NTUsMTM0Nzg0NTc3OCw3MTI0MjAzODIsLTE1ODkzNDAyODJdfQ
 ==
