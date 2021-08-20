@@ -75,13 +75,11 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 	+ [Oracle](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)에서 Basic 64-bit rpm을 다운 받는다.
 	+ 터미널에서 아래 설치 스크립트를 실행한다.
 		```
-		sudo yum install oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
+		/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
 		```
-	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
-		```
-		sudo mkdir /usr/local/oracle
-		sudo mv ~/Downloads/instantclient_19_8 /usr/local/oracle
-		```
+	+ 자동으로 path 경로와 필요 라이브러리가 같이 설치 되지만, rpm으로 설치하지 않거나, Instant Client 19 이전 버전을 설치 할 경우, 하단의 링크를 참조한다.
+
+		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24) 
 
 ---
 + **Oracle Instant Client 설정 (macOS)**
@@ -90,7 +88,7 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		```
 		/Volumes/instantclient-basic-macos.x64-19.8.0.0.0dbru/install_ic.sh
 		```
-	+ 자동으로 path 경로와 필요 라이브러리가 같이 설치 되지만, rpm으로 설치하지 않거나, Instant Client 19 이전 버전을 설치 할 경우, 하단의 링크를 참조한다.일 경우,기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
+	+ 기본적으로 `$HOME/Downloads/instantclient_19_8`에 라이브러리가 복사되며, `/usr/local/oracle`로 이동시킨다.
 		```
 		sudo mkdir /usr/local/oracle
 		sudo mv ~/Downloads/instantclient_19_8 /usr/local/oracle
@@ -103,13 +101,12 @@ Django 내에서 cx_Oracle을 불러오는 위치가 저 안에 있어서 해당
 		```
 	+ 다시 `cursor = connection.cursor()`로 connection 여부를 확인하면 애러 메시지가 출력되지 않는 것을 확인할 수 있다.
 
-		[참조] [Python에서 Oracle 사용하기 (for Mac OS X)](https://davelogs.tistory.com/23)  
-		[참조] [Python에서 Oracle 사용하기 (for Linux)](https://davelogs.tistory.com/24)   
+		[참조] [Python에서 Oracle 사용하기 (for Mac OS X)](https://davelogs.tistory.com/23)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MTgyOTk2NywxMjY0MjYwMTMzLDE5Nj
-I5Njk2OTYsMjI0MzExNTM0LC03MTkyMjgxNTgsNzEzOTc1NzAs
-NTg1Njc0NjM4LDIwMjk5OTA4NCwtMTIzNzQxMDUzNCwyMDk5Mz
-A3MDY5LC0yMDQ0MDE2OTA5LC0xODM3ODg2NDc3LC0xNDIzMjY2
-MDY1XX0=
+eyJoaXN0b3J5IjpbLTEwNjA3ODY5NTgsMTI2NDI2MDEzMywxOT
+YyOTY5Njk2LDIyNDMxMTUzNCwtNzE5MjI4MTU4LDcxMzk3NTcw
+LDU4NTY3NDYzOCwyMDI5OTkwODQsLTEyMzc0MTA1MzQsMjA5OT
+MwNzA2OSwtMjA0NDAxNjkwOSwtMTgzNzg4NjQ3NywtMTQyMzI2
+NjA2NV19
 -->
