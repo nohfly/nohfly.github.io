@@ -45,8 +45,10 @@ WantedBy = multi-user.target
 ```
 $ sudo chmod 755 /프로젝트경로/서비스이름.service
 ```
-### 3. systemd 디렉토리에 링크 생성 (sudo ln -s /home/adm_user/FitnessMeasure/fitnessmeasure.service /etc/systemd/system
-/fitnessmeasure.service)
+### 3. systemd 디렉토리에 링크 생성
+```
+$ sudo ln -s /프로젝트경로/서비스이름.service /etc/systemd/system/서비스이름.service
+```
 
 
 ```
@@ -57,5 +59,5 @@ $ ssh username@원격서버주소 -p 포트번호
 ---
 ### 2. SSH Tunneling 설정하기
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUwMDkxOTE5XX0=
+eyJoaXN0b3J5IjpbMTA0NzAxNTg3NV19
 -->
