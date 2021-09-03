@@ -12,9 +12,16 @@ Django 서버 가동을 위한 .py 파일을 리눅스 서비스로 등록해, �
 
 실행하고자 하는 python 파일
 ```python
-$ ssh username@원격서버주소
+# runserver.py
+from waitress import serve  
+from cogsvc.wsgi import application  
+  
+if __name__ == '__main__':  
+    serve(application, port='8080')
 ```
--- 22번 포트로 접속한다.
+### 1. .service 파일 작성
+관리를 위해 해당 프로젝트 폴더 내 서비스 
+
 
 ```
 $ ssh username@원격서버주소 -p 포트번호
@@ -24,5 +31,5 @@ $ ssh username@원격서버주소 -p 포트번호
 ---
 ### 2. SSH Tunneling 설정하기
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MjY5NTI2N119
+eyJoaXN0b3J5IjpbMTQ4ODM4NTM5Ml19
 -->
