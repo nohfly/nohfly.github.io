@@ -41,7 +41,12 @@ RestartSec = 10s
 [Install]  
 WantedBy = multi-user.target
 ```
-해당 .service 파일의 권한 수정
+### 2. .service 파일의 권한 수정
+```
+$ sudo chmod 755 /프로젝트경로/서비스이름.service
+```
+### 3. systemd 디렉토리에 링크 생성 (sudo ln -s /home/adm_user/FitnessMeasure/fitnessmeasure.service /etc/systemd/system
+/fitnessmeasure.service)
 
 
 ```
@@ -52,5 +57,5 @@ $ ssh username@원격서버주소 -p 포트번호
 ---
 ### 2. SSH Tunneling 설정하기
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTQ3Njk2OV19
+eyJoaXN0b3J5IjpbOTUwMDkxOTE5XX0=
 -->
