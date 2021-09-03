@@ -27,8 +27,21 @@ $ sudo vi /프로젝트경로/서비스이름.service
 
 아래 내용 작성 후 :wq! 저장
 ```
-
+[Unit]  
+Description = Fitness Measure  
+After = multi-user.target  
+  
+[Service]  
+Type = simple  
+WorkingDirectory = /home/usera/FitnessMeasure  
+ExecStart = /home/usera/anaconda3/envs/AAAService/bin/python /home/usera/FitnessMeasure/runserver.py  
+Restart = on-failure  
+RestartSec = 10s  
+  
+[Install]  
+WantedBy = multi-user.target
 ```
+해당 .service 파일의 권한 수정
 
 
 ```
@@ -39,5 +52,5 @@ $ ssh username@원격서버주소 -p 포트번호
 ---
 ### 2. SSH Tunneling 설정하기
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NzM0NjM1N119
+eyJoaXN0b3J5IjpbLTU3NTQ3Njk2OV19
 -->
