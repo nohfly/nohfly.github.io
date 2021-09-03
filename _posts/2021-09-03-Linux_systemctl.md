@@ -49,8 +49,17 @@ $ sudo chmod 755 /프로젝트경로/서비스이름.service
 ```
 $ sudo ln -s /프로젝트경로/서비스이름.service /etc/systemd/system/서비스이름.service
 ```
+### 4. 서비스 자동 실행 등록
+```
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable 서비스이름
+```
+### 5. 서비스 수동 실행 및 상태 확인
+```
+$ sudo systemctl start fitnessmeasure.service
 
-
+$ sudo systemctl enable 서비스이름
+```
 ```
 $ ssh username@원격서버주소 -p 포트번호
 ```
@@ -59,5 +68,5 @@ $ ssh username@원격서버주소 -p 포트번호
 ---
 ### 2. SSH Tunneling 설정하기
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NzAxNTg3NV19
+eyJoaXN0b3J5IjpbLTU5NjMzNTI0MF19
 -->
