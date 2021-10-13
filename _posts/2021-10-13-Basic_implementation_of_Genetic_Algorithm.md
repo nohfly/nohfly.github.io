@@ -11,7 +11,7 @@ Genetic algorithm is one of search algorithms derived from Charles Darwin's theo
 
 During the reproduction, the genetic transcript of the parent is copied to the children but not the exact copy is produced. The transcript of the parents gets mixed with each other producing alternations in children(***crossover***). In the transcript of children, genetic mutation occurs and alters random code of the transcript(***mutation***). Such alternations do not necessarily result in better fitness to the environment. Many offsprings may fall behind to their parents, or the alternation may not result in difference in phenotypes. But some few will show better fitness to the environment, surviving better than their parents and produce offsprings. As generations continue, such random alternations will produce most fitting individuals, hence the natural selection.
 
-This random alteration through generations comes in handy when solving the optimization problem, avoiding from the local mininum.
+This random alteration through generations comes in handy when solving the optimization problem, avoiding from the local minimum. 
 
 
 ## 서버에 python 서비스 등록
@@ -35,7 +35,7 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjQ3ODM5MDAsMzg4NTU0MDk2LDEyMj
+eyJoaXN0b3J5IjpbLTE4MjQ4NzgzNzMsMzg4NTU0MDk2LDEyMj
 ExOTQ5MTcsMTUxNDM2NzAyLC03MjQyNjcwNywxNDQzNDU5ODg1
 XX0=
 -->
