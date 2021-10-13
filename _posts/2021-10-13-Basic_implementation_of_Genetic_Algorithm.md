@@ -15,7 +15,8 @@ This random alteration through generations comes in handy when solving the optim
 
 The implementation of genetic algorithm in python will be comprised of five modules: **geneticAlgorithm**, **initialPopulation**, **crossover**, **mutation** and **fitnessFunction**.
 
-### 1) 
+## Sample problem
+asd
 
 ### 서버에 python 서비스 등록
 Django 서버 가동을 위한 .py 파일을 리눅스 서비스로 등록해, 서버 시작시 자동으로 구동되도록 함.
@@ -38,7 +39,7 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU1Mzk5NTAwLC0xODI0ODc4MzczLDM4OD
-U1NDA5NiwxMjIxMTk0OTE3LDE1MTQzNjcwMiwtNzI0MjY3MDcs
-MTQ0MzQ1OTg4NV19
+eyJoaXN0b3J5IjpbLTkxNDI0NDk4OCwtMTgyNDg3ODM3MywzOD
+g1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyNDI2NzA3
+LDE0NDM0NTk4ODVdfQ==
 -->
