@@ -1,5 +1,5 @@
 ---
-title: "#1 Basic implementation of Genetic Algorithm"
+title: "1. Basic implementation of Genetic Algorithm"
 categories:
  - project1
 tags:
@@ -33,5 +33,6 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNDI2NzA3LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbMTUxNDM2NzAyLC03MjQyNjcwNywxNDQzND
+U5ODg1XX0=
 -->
