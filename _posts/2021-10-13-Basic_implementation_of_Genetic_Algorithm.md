@@ -7,9 +7,9 @@ tags:
 published: true
 ---
 
-Genetic algorithm is one of searching algorithms derived from how natural species evolve to fit into the natural environment 
+Genetic algorithm is one of search algorithms derived from Charles Darwin's theory of natural evolution. To survive in specific environments, individuals go through process of natural selection where the most fihow natural species evolve to fit into the natural environment 
 
-
+A genetic algorithm is **a search heuristic that is inspired by Charles Darwin's theory of natural evolution**. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce offspring of the next generation
 
 ## 서버에 python 서비스 등록
 Django 서버 가동을 위한 .py 파일을 리눅스 서비스로 등록해, 서버 시작시 자동으로 구동되도록 함.
@@ -32,5 +32,5 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDI0ODU4NTFdfQ==
+eyJoaXN0b3J5IjpbLTczODc2NjY5Nl19
 -->
