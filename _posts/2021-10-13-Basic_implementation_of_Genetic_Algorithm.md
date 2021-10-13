@@ -15,7 +15,6 @@ This random alteration through generations comes in handy when solving the optim
 
 The implementation of genetic algorithm in python will be comprised of five modules: **geneticAlgorithm**, **initialPopulation**, **crossover**, **mutation** and **fitnessFunction**.
 
----
 ## Sample problem
 Let's say we generate length 10 string which is composed of four 'A's, three 'B's, two 'C's and one 'D'.
 Such as:
@@ -44,7 +43,7 @@ Given the list of characters and size of the population, we can now get initial 
 ```python
 import initialPopulation
 
-charlist = ['A']*4 + ['B']*3 + ['C']*2 + ['D']*1
+charlist = ['A'] * 4 + ['B'] * 3 + ['C'] * 2 + ['D'] * 1
 popsize = 50
 
 initialpop = initialPopulation(charlist, popsize)
@@ -65,7 +64,8 @@ def rankPopulation(charlist, popsize):
 xxx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEyMTY2ODM5LC0yMTE3ODI5MjAsLTkxND
-I0NDk4OCwtMTgyNDg3ODM3MywzODg1NTQwOTYsMTIyMTE5NDkx
-NywxNTE0MzY3MDIsLTcyNDI2NzA3LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbNTgwNDIwMDEwLDcxMjE2NjgzOSwtMjExNz
+gyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4NzgzNzMsMzg4NTU0MDk2
+LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03MjQyNjcwNywxNDQzND
+U5ODg1XX0=
 -->
