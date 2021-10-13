@@ -13,10 +13,11 @@ During the reproduction, the genetic transcript of the parent is copied to the c
 
 This random alteration through generations comes in handy when solving the optimization problem. As individuals approach local minimum, randomness introduced by crossover and mutation enables new individuals outside the boundary of local minimum, thereby enabling the algorithm to find global minimum.
 
-The implementation of genetic algorithm in python will be comprised of five modules: *geneticAlgorithm**, initialPopulation, crossover, mutation and fitnessFunction.
+The implementation of genetic algorithm in python will be comprised of five modules: **geneticAlgorithm**, **initialPopulation**, **crossover**, **mutation** and **fitnessFunction**.
 
+### 1) 
 
-## 서버에 python 서비스 등록
+### 서버에 python 서비스 등록
 Django 서버 가동을 위한 .py 파일을 리눅스 서비스로 등록해, 서버 시작시 자동으로 구동되도록 함.
 
 실행하고자 하는 python 파일
@@ -37,7 +38,7 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NzY3MjgxNCwtMTgyNDg3ODM3MywzOD
-g1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyNDI2NzA3
-LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbOTU1Mzk5NTAwLC0xODI0ODc4MzczLDM4OD
+U1NDA5NiwxMjIxMTk0OTE3LDE1MTQzNjcwMiwtNzI0MjY3MDcs
+MTQ0MzQ1OTg4NV19
 -->
