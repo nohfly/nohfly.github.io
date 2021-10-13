@@ -16,6 +16,7 @@ This random alteration through generations comes in handy when solving the optim
 The implementation of genetic algorithm in python will be comprised of five modules: **geneticAlgorithm**, **initialPopulation**, **crossover**, **mutation** and **fitnessFunction**.
 
 ## Sample problem
+Let's say that we have length 10 string which is composed go a
 ```
 ABCDEFG
 ```
@@ -42,7 +43,7 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTc4MjkyMCwtOTE0MjQ0OTg4LC0xOD
-I0ODc4MzczLDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MTQzNjcw
-MiwtNzI0MjY3MDcsMTQ0MzQ1OTg4NV19
+eyJoaXN0b3J5IjpbLTc3OTUyODIxMywtMjExNzgyOTIwLC05MT
+QyNDQ5ODgsLTE4MjQ4NzgzNzMsMzg4NTU0MDk2LDEyMjExOTQ5
+MTcsMTUxNDM2NzAyLC03MjQyNjcwNywxNDQzNDU5ODg1XX0=
 -->
