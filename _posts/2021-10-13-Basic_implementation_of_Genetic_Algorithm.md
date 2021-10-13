@@ -7,7 +7,7 @@ tags:
 published: true
 ---
 
-Genetic algorithm is one of search algorithms derived from Charles Darwin's theory of natural evolution. To survive in specific environments, individuals go through process of natural selection where the most fittest ones survive and produce offspring. During the reproduction, the genetic transcript of the parent is copied to the children but 
+Genetic algorithm is one of search algorithms derived from Charles Darwin's theory of natural evolution. To survive in specific environments, individuals go through process of natural selection where the most fittest ones survive and produce offspring. During the reproduction, the genetic transcript of the parent is copied to the children but not the exact copy is produced. 
 
 A genetic algorithm is **a search heuristic that is inspired by Charles Darwin's theory of natural evolution**. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce offspring of the next generation
 
@@ -32,5 +32,5 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MzQ1OTg4NV19
+eyJoaXN0b3J5IjpbLTE1OTA5NTg1NDUsMTQ0MzQ1OTg4NV19
 -->
