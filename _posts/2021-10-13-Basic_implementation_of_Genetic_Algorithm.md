@@ -15,38 +15,57 @@ This random alteration through generations comes in handy when solving the optim
 
 The implementation of genetic algorithm in python will be comprised of five modules: **geneticAlgorithm**, **initialPopulation**, **crossover**, **mutation** and **fitnessFunction**.
 
+---
 ## Sample problem
-Let's say that we have length 10 string which is composed of four 'A's, three 'B's, two 'C's and one 'D'.
+Let's say we generate length 10 string which is composed of four 'A's, three 'B's, two 'C's and one 'D'.
 Such as:
 ```
 "ADCBCAABAC"
 ```
 What we want to do is to find a string where most of the characters are bagged together:
 ```
-"AAAABBBCCD","BBBDAAAACC"
+"AAAABBBCCD", "BBBDAAAACC", "DCCAAAABBB" or etc.
 ```
-### 서버에 python 서비스 등록
-Django 서버 가동을 위한 .py 파일을 리눅스 서비스로 등록해, 서버 시작시 자동으로 구동되도록 함.
+Of course we can just use combinations of "AAAA", "BBB", "CCC" and "D" to generate all correct stings. But let's assume that we cannot, which is often true in real situations where the rules are complex.
 
-실행하고자 하는 python 파일
+We can use genetic algorithm to solve this problem starting with setting up the initial population.
+
+### 1) set initial population
+Initial population is the mix of first random individuals where we can start apply genetic algorithm.
 ```python
-# runserver.py
-from waitress import serve  
-from cogsvc.wsgi import application  
-  
-if __name__ == '__main__':  
-    serve(application, port='8080')
+def initialPopulation(charlist, popsize):
+	population = []
+	for i in range(popsize):
+		asdasdasd
+		population.append(individual)
+	return population
 ```
-### 1. .service 파일 작성
-관리를 위해 해당 프로젝트 폴더 내 서비스이름.service 파일을 생성함
-```
-$ sudo vi /프로젝트경로/서비스이름.service
-``` 
+Given the list of characters and size of the population, we can now get initial population composed of random individual strings.
+```python
+import initialPopulation
 
-아래 내용 작성 후 :wq! 저장
+charlist = ['A']*4 + ['B']*3 + ['C']*2 + ['D']*1
+popsize = 50
+
+initialpop = initialPopulation(charlist, popsize)
+>>> ["ABCDCABABA","AABCBCBADA", ...]
+```
+Next, we apply fitness function to calculate fitness score of each individuals to our environment, characters should be bagged, and rank them to select parents for the next generation.
+
+### 2) calculate fitness score
+xxx
+```python
+def rankPopulation(charlist, popsize):
+	population = []
+	for i in range(popsize):
+		asdasdasd
+		population.append(individual)
+	return population
+```
+xxx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMzk4OTY3MSwtMjExNzgyOTIwLC05MT
-QyNDQ5ODgsLTE4MjQ4NzgzNzMsMzg4NTU0MDk2LDEyMjExOTQ5
-MTcsMTUxNDM2NzAyLC03MjQyNjcwNywxNDQzNDU5ODg1XX0=
+eyJoaXN0b3J5IjpbNzEyMTY2ODM5LC0yMTE3ODI5MjAsLTkxND
+I0NDk4OCwtMTgyNDg3ODM3MywzODg1NTQwOTYsMTIyMTE5NDkx
+NywxNTE0MzY3MDIsLTcyNDI2NzA3LDE0NDM0NTk4ODVdfQ==
 -->
