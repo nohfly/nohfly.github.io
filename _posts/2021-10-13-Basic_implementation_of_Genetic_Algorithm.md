@@ -7,7 +7,7 @@ tags:
 published: true
 ---
 
-Genetic algorithm is one of searching algorithms which 
+Genetic algorithm is one of searching algorithms derived from how  
 
 ## 서버에 python 서비스 등록
 Django 서버 가동을 위한 .py 파일을 리눅스 서비스로 등록해, 서버 시작시 자동으로 구동되도록 함.
@@ -30,5 +30,5 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDgwNjI1OTJdfQ==
+eyJoaXN0b3J5IjpbLTE5Nzg3MzMyODZdfQ==
 -->
