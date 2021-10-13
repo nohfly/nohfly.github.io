@@ -17,10 +17,11 @@ The implementation of genetic algorithm in python will be comprised of five modu
 
 ## Sample problem
 Let's say that we have length 10 string which is composed of four 'A's, three 'B's, two 'C's and one 'D'.
+Such as:
 ```
 "ADCBCAABAC"
 ```
-asd
+What we want is to find a string where most of the characters are bagged 
 
 ### 서버에 python 서비스 등록
 Django 서버 가동을 위한 .py 파일을 리눅스 서비스로 등록해, 서버 시작시 자동으로 구동되도록 함.
@@ -43,7 +44,7 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MTQ0MDg1MiwtMjExNzgyOTIwLC05MT
-QyNDQ5ODgsLTE4MjQ4NzgzNzMsMzg4NTU0MDk2LDEyMjExOTQ5
-MTcsMTUxNDM2NzAyLC03MjQyNjcwNywxNDQzNDU5ODg1XX0=
+eyJoaXN0b3J5IjpbLTE4MDk2MjQxMDMsLTIxMTc4MjkyMCwtOT
+E0MjQ0OTg4LC0xODI0ODc4MzczLDM4ODU1NDA5NiwxMjIxMTk0
+OTE3LDE1MTQzNjcwMiwtNzI0MjY3MDcsMTQ0MzQ1OTg4NV19
 -->
