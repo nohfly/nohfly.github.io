@@ -13,7 +13,7 @@ During the reproduction, the genetic transcript of the parent is copied to the c
 
 This random alteration through generations comes in handy when solving the optimization problem. As individuals approach local minimum, randomness introduced by crossover and mutation enables new individuals outside the boundary of local minimum, thereby enabling the algorithm to find global minimum.
 
-The bas
+The basic components of genetic algorithm 
 
 
 ## 서버에 python 서비스 등록
@@ -37,7 +37,7 @@ $ sudo vi /프로젝트경로/서비스이름.service
 아래 내용 작성 후 :wq! 저장
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNTQxNzY2MiwtMTgyNDg3ODM3MywzOD
+eyJoaXN0b3J5IjpbMTc1MDg2MjQ1OSwtMTgyNDg3ODM3MywzOD
 g1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyNDI2NzA3
 LDE0NDM0NTk4ODVdfQ==
 -->
