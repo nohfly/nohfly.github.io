@@ -106,7 +106,7 @@ rankedpop, popscore = rank_population(query, initialpop)
 >>> [-5, -8, -2006, ...]
 ```
 ### 4) select elite population
-From the ranked population, we select parents(*elitepop*) which will reproduce offsprings. selec
+From the ranked population, we select parents(*elitepop*) which will reproduce offsprings. Selection of parents 
 ```python
 rankedpop, popscore = rank_population(query, initialpop)  
 >>> ['CCBDAAABBA', 'BACBACAABD', 'ABCAADABBB', ...]
@@ -120,7 +120,7 @@ elitescore = popscore[:elitesize]
 >>> [-5, -8, -2006]
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMjM4NTM5OCw1ODA0MjAwMTAsNzEyMT
+eyJoaXN0b3J5IjpbMTY1NjcyNDY5NCw1ODA0MjAwMTAsNzEyMT
 Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
 MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
 I2NzA3LDE0NDM0NTk4ODVdfQ==
