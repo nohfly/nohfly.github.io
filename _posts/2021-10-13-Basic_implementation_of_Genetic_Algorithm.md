@@ -258,8 +258,9 @@ def main():
 ```
 The top-scored individual in the initial population was "BBDCAABAAC" with the score of *-6*, and before the iteration reaches 100th generation, the top-scored individual was "BBBDAAAACC" with the score of *-3*.
 With simple heuristics, we can come up with the answer of "AAAABBBCCD" and that the best score will always be *-3* for the given query.
+Using the genetic algorithm, we do not need to specify how to make answers to the pro
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MTU3MjI3MiwxNjU2NzI0Njk0LDU4MD
+eyJoaXN0b3J5IjpbLTcxMjYyODgzOCwxNjU2NzI0Njk0LDU4MD
 QyMDAxMCw3MTIxNjY4MzksLTIxMTc4MjkyMCwtOTE0MjQ0OTg4
 LC0xODI0ODc4MzczLDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MT
 QzNjcwMiwtNzI0MjY3MDcsMTQ0MzQ1OTg4NV19
