@@ -30,7 +30,7 @@ Of course we can just use combinations of "AAAA", "BBB", "CCC" and "D" to genera
 We can use genetic algorithm to solve this problem starting with setting up the initial population.
 
 ### 1) set initial population
-Initial population is the mix of first random individuals where we can start apply genetic algorithm.
+Initial population is the mix of first random individuals where we can start apply genetic algorithm. Giv
 ```python
 def initial_population(query, popsize):  
    population = []  
@@ -70,8 +70,8 @@ def rankPopulation(charlist, popsize):
 xxx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDkwNzY4OTgsNTgwNDIwMDEwLDcxMj
-E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
-NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
-QyNjcwNywxNDQzNDU5ODg1XX0=
+eyJoaXN0b3J5IjpbMTA5Mjg4MDg4Miw1ODA0MjAwMTAsNzEyMT
+Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
+MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
+I2NzA3LDE0NDM0NTk4ODVdfQ==
 -->
