@@ -77,7 +77,7 @@ def fitness(query, individual):
 ```
 The score deduction from the second rule, *2) Occurrence of each character should be the same as stated in the query*, has 1,000 times more weight than that of the first one, as it is more important to comply with the given query.
 ### 3) rank initial population
-Using the **
+Using the defined *fitness()* function, we can now rank the initial population based on fitness scores of individuals.
 ```python
 import fitness
 
@@ -96,7 +96,7 @@ def rank_population(query, population):
    return rankedpop, popscore
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3ODMzMDMzNiw1ODA0MjAwMTAsNzEyMT
+eyJoaXN0b3J5IjpbMjAzNzU4NDM4Miw1ODA0MjAwMTAsNzEyMT
 Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
 MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
 I2NzA3LDE0NDM0NTk4ODVdfQ==
