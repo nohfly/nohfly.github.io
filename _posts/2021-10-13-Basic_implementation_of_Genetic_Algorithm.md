@@ -93,7 +93,7 @@ def rank_population(query, population):
   
    return rankedpop, popscore
 ```
-
+We now apply *rank_population()* to our *initialpop* to get *rankedpop* and *popscore*.
 ```python
 query = {'A': 4, 'B': 3, 'C': 2, 'D': 1}
 popsize = 50  
@@ -106,8 +106,8 @@ print(rankedpop)
 print(popscore)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzcwNTc0MTQsNTgwNDIwMDEwLDcxMj
-E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
-NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
-QyNjcwNywxNDQzNDU5ODg1XX0=
+eyJoaXN0b3J5IjpbNDMwNDgwNDYwLDU4MDQyMDAxMCw3MTIxNj
+Y4MzksLTIxMTc4MjkyMCwtOTE0MjQ0OTg4LC0xODI0ODc4Mzcz
+LDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MTQzNjcwMiwtNzI0Mj
+Y3MDcsMTQ0MzQ1OTg4NV19
 -->
