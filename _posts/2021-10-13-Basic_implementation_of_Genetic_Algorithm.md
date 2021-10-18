@@ -13,7 +13,7 @@ During the reproduction, the genetic transcript of the parent is copied to the c
 
 This random alteration through generations comes in handy when solving the optimization problem. As individuals approach local minimum, randomness introduced by crossover and mutation enables new individuals outside the boundary of local minimum, thereby enabling the algorithm to find global minimum.
 
-The implementation of genetic algorithm in python will be comprised of five modules: **geneticAlgorithm**, **initialPopulation**, **crossover**, **mutation** and **fitnessFunction**.
+The implementation of genetic algorithm in python will be comprised of seven steps: **1) set initial population**, **2) calculate fitness score**, **3) rank initial population**, **4) select elite population**, **5) crossover**, **6) mutation** and **7) iterate through generations**.
 
 ## Sample problem
 Let's say we generate length 10 string which is composed of four 'A's, three 'B's, two 'C's and one 'D'.
@@ -127,7 +127,7 @@ For the crossover, we use two-point crossover approach. Given the parent A and B
 child A = [head of parent B] + [middle of parent A] + [tail of parent B]
 child B = [head of parent A] + [middle of parent B] + [tail of parent A]
 ```
-This represents the reproduction of child genotypes from the parent
+This represents the reproduction of child genotypes from the parent. The locations(*copoints*) which define head, middle and tail of the sequence will be determined randomly.
 ```python
 from itertools import combinations
 import random
@@ -151,9 +151,116 @@ def crossover(parents):
   
    return children
 ```
+### 6) mutation
+For the mutation, we go through character sequence of each individual in parent populations, and with the probability of *mutation_rate*, we change the character at certain location into the other character mentioned in *query*.
+```python
+import random
+
+def mutation(query, parents, mutation_rate):  
+   children = []  
+  
+   for individual in parents:  
+      indiv = list(individual)  
+  
+      for i in range(len(indiv)):  
+         if random.random() < mutation_rate:  
+            new_char = random.choice(list(query.keys()))  
+            indiv[i] = new_char  
+  
+      children.append("".join(indiv))  
+  
+   return children
+```
+### 7) iterate through generations
+After the *crossover* and *mutation* step to populate more individuals, the total population goes through *rank_population()*. Then the whole process, except the **1) set initial population**, iterates through generations until the optimal solution is found.
+The integrated method of genetic algorithm is as follows:
+```python
+import initial_population, rank_population, crossover, mutation
+
+def runGA(query, initialpop_size, elitepop_size, generation_cnt, mutation_rate):  
+   # Initial population setting  
+   initialpop = initial_population(query, initialpop_size)  
+  
+   # Rank initial population  
+   rankedpop, popscore = rank_population(query, initialpop)  
+  
+   # Select elite population  
+   elitepop = rankedpop[:elitepop_size]  
+   elitescore = popscore[:elitepop_size]  
+  
+   print(f"Initial population: {elitepop[0]} - {elitescore[0]}")  
+  
+   # Iterate for generation cnt  
+   for i in range(generation_cnt):  
+      totalpop = elitepop  
+  
+      # Crossover  
+      co_children = crossover(totalpop)  
+      totalpop += co_children  
+  
+      # Mutation  
+      mt_children = mutation(query, totalpop, mutation_rate)  
+      totalpop += mt_children  
+  
+      # Remove duplicates  
+      totalpop = list(set(totalpop))  
+  
+      # Rank total population  
+      rankedpop, popscore = rank_population(query, totalpop)  
+  
+      # Select elite population  
+      elitepop = rankedpop[:elitepop_size]  
+      elitescore = popscore[:elitepop_size]  
+  
+      if (i + 1) % 100 == 0:  
+         print(f"{i + 1}th generation: {elitepop[0]} - {elitescore[0]}")  
+  
+   return elitepop, elitescore
+```
+Given the query, our *runGA()* will produce following result:
+```python
+import runGA
+
+def main():  
+   # Query statement  
+   query = {'A': 4, 'B': 3, 'C': 2, 'D': 1}  
+   print(f"Query: {query}\n")  
+  
+   # Set GA parameters  
+   initialpop_size = 100  
+   elitepop_size = 5  
+   generation_cnt = 1000  
+   mutation_rate = 0.1  
+  
+   # Run genetic algorithm  
+   result, result_score = runGA(query, initialpop_size, elitepop_size, generation_cnt, mutation_rate)  
+  
+   # Print result  
+   print(f"\nResult: {result}")  
+   print(f"Result score: {result_score}")
+
+>>> Query: {'A': 4, 'B': 3, 'C': 2, 'D': 1}
+>>>
+>>> Initial population: BBDCAABAAC - -6
+>>> 100th generation: BBBDAAAACC - -3
+>>> 200th generation: BBBDAAAACC - -3
+>>> 300th generation: BBBDAAAACC - -3
+>>> 400th generation: DBBBAAAACC - -3
+>>> 500th generation: DBBBAAAACC - -3
+>>> 600th generation: DBBBAAAACC - -3
+>>> 700th generation: DBBBAAAACC - -3
+>>> 800th generation: DBBBAAAACC - -3
+>>> 900th generation: DBBBAAAACC - -3
+>>> 1000th generation: DBBBAAAACC - -3
+>>>
+>>> Result: ['DBBBAAAACC', 'BBBAAAACCD', 'BBBDAAAACC', 'BBBAAAADCC', 'DBBAAAABCC']
+>>> Result score: [-3, -3, -3, -3, -4]
+```
+The top-scored individual in the initial population was "BBDCAABAAC" with the score of *-6*, and before the iteration reaches 100th generation, the top-scored individual was "BBBDAAAACC" with the score of *-3*.
+Heuristically, we can come up with the answer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NzIxNzkxLDE2NTY3MjQ2OTQsNTgwND
-IwMDEwLDcxMjE2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgs
-LTE4MjQ4NzgzNzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxND
-M2NzAyLC03MjQyNjcwNywxNDQzNDU5ODg1XX0=
+eyJoaXN0b3J5IjpbLTk4MTgyMzQ4OCwxNjU2NzI0Njk0LDU4MD
+QyMDAxMCw3MTIxNjY4MzksLTIxMTc4MjkyMCwtOTE0MjQ0OTg4
+LC0xODI0ODc4MzczLDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MT
+QzNjcwMiwtNzI0MjY3MDcsMTQ0MzQ1OTg4NV19
 -->
