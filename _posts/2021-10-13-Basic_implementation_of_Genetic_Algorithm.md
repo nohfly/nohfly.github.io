@@ -122,7 +122,7 @@ elitescore = popscore[:elitesize]
 >>> [-5, -8, -2006]
 ```
 ### 5) crossover
-For the crossover, we used two
+For the crossover, we use two-point crossover approach. Given the parents, parent A's 
 ```python
 from itertools import combinations
 import random
@@ -147,7 +147,7 @@ def crossover(parents):
    return children
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDcwNTA2NDcsMTY1NjcyNDY5NCw1OD
+eyJoaXN0b3J5IjpbLTExNTk1MDE3MTQsMTY1NjcyNDY5NCw1OD
 A0MjAwMTAsNzEyMTY2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4
 OCwtMTgyNDg3ODM3MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNT
 E0MzY3MDIsLTcyNDI2NzA3LDE0NDM0NTk4ODVdfQ==
