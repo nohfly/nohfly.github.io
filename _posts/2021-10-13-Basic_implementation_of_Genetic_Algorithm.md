@@ -122,7 +122,8 @@ elitescore = popscore[:elitesize]
 >>> [-5, -8, -2006]
 ```
 ### 5) crossover
-For the crossover, we use two-point crossover approach. Given the parents, parent A's 
+For the crossover, we use two-point crossover approach. Given the parent A and B, the char sequence of children will be:
+child A = [head of parent B] + [middle of parent A]  
 ```python
 from itertools import combinations
 import random
@@ -147,8 +148,8 @@ def crossover(parents):
    return children
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTk1MDE3MTQsMTY1NjcyNDY5NCw1OD
-A0MjAwMTAsNzEyMTY2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4
-OCwtMTgyNDg3ODM3MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNT
-E0MzY3MDIsLTcyNDI2NzA3LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbMjg4MDI0MzQ2LDE2NTY3MjQ2OTQsNTgwND
+IwMDEwLDcxMjE2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgs
+LTE4MjQ4NzgzNzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxND
+M2NzAyLC03MjQyNjcwNywxNDQzNDU5ODg1XX0=
 -->
