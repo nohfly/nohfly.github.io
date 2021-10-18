@@ -76,10 +76,28 @@ def fitness(query, individual):
   return score
 ```
 The score deduction from the second rule, *2) Occurrence of each character should be the same as stated in the query*, has 1,000 times more weight than that of the first one, as it is more important to comply with the given query.
+### 3) rank initial population
+Using the **
+```python
+import fitness
 
+def rank_population(query, population):  
+   score_result = []  
+  
+   for indiv in population:  
+      score = fitness(query, indiv)  
+      score_result.append((indiv, score))  
+  
+   score_result.sort(reverse=True, key=lambda x: x[1])  
+  
+   rankedpop = [pop for pop, score in score_result]  
+   popscore = [score for pop, score in score_result]  
+  
+   return rankedpop, popscore
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDkzOTY0LDU4MDQyMDAxMCw3MTIxNj
-Y4MzksLTIxMTc4MjkyMCwtOTE0MjQ0OTg4LC0xODI0ODc4Mzcz
-LDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MTQzNjcwMiwtNzI0Mj
-Y3MDcsMTQ0MzQ1OTg4NV19
+eyJoaXN0b3J5IjpbMTg3ODMzMDMzNiw1ODA0MjAwMTAsNzEyMT
+Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
+MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
+I2NzA3LDE0NDM0NTk4ODVdfQ==
 -->
