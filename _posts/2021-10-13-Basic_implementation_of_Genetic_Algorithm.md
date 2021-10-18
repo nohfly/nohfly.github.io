@@ -55,10 +55,8 @@ popsize = 50
 initialpop = initial_population(query, popsize)
 >>> ["ABCDCABABA","AABCBCBADA", ...]
 ```
-Next, we apply fitness function to calculate fitness score of each individuals to our environment, characters should be bagged, and rank them to select parents for the next generation.
-
 ### 2) calculate fitness score
-xxx
+Next, we apply fitness function to calculate fitness score of each individuals to our environment: characters should be bagged. To enforce this environment to our individuals, two rules will be applied
 ```python
 def rankPopulation(charlist, popsize):
 	population = []
@@ -70,8 +68,8 @@ def rankPopulation(charlist, popsize):
 xxx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDcyMzY4OTYsNTgwNDIwMDEwLDcxMj
-E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
-NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
-QyNjcwNywxNDQzNDU5ODg1XX0=
+eyJoaXN0b3J5IjpbLTE4NTM4NzEyMiw1ODA0MjAwMTAsNzEyMT
+Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
+MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
+I2NzA3LDE0NDM0NTk4ODVdfQ==
 -->
