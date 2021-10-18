@@ -45,9 +45,9 @@ def initial_population(query, popsize):
   
    return population
 ```
-Given the list of characters and size of the population, we can now get initial population composed of random individual strings.
+Given the dictionary of character keys and their occurrences, we can now get initial population composed of random individual strings.
 ```python
-import initialPopulation
+import initial_population
 
 query = {'A': 4, 'B': 3, 'C': 2, 'D': 1}
 popsize = 50  
@@ -70,7 +70,7 @@ def rankPopulation(charlist, popsize):
 xxx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQ0NzQxMTYsNTgwNDIwMDEwLDcxMj
+eyJoaXN0b3J5IjpbLTE2NDcyMzY4OTYsNTgwNDIwMDEwLDcxMj
 E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
 NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
 QyNjcwNywxNDQzNDU5ODg1XX0=
