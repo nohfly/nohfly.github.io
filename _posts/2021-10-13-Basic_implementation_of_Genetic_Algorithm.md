@@ -32,6 +32,8 @@ We can use genetic algorithm to solve this problem starting with setting up the 
 ### 1) set initial population
 Initial population is the mix of first random individuals where we can start apply genetic algorithm. Given the character sets and their occurrences(*query*), *initial_population()* generates a *popsize* population with randomly sequenced individuals.
 ```python
+import random
+
 def initial_population(query, popsize):  
    population = []  
   
@@ -120,22 +122,33 @@ elitescore = popscore[:elitesize]
 >>> [-5, -8, -2006]
 ```
 ### 5) crossover
-From the ranked population, we select parents(*elitepop*) which will reproduce offsprings. Selection of parents can be designed in many ways; select top three individuals and include one random individual, select top two individuals and include parent from previous generation, and etc. Introduction of randomness will vary on how parents are being selected. Here, for the simplicity, we just select top scored individuals as parents.
+For the crossover, we used two
 ```python
-rankedpop, popscore = rank_population(query, initialpop)  
->>> ['CCBDAAABBA', 'BACBACAABD', 'ABCAADABBB', ...]
->>> [-5, -8, -2006, ...]
+from itertools import combinations
+import random
 
-elitesize = 3  
+def crossover(parents):  
+   children = []  
   
-elitepop = rankedpop[:elitesize]  
-elitescore = popscore[:elitesize]
->>> ['CCBDAAABBA', 'BACBACAABD', 'ABCAADABBB']
->>> [-5, -8, -2006]
+   matecomb = combinations(parents, 2)  
+  
+   for comb in matecomb:  
+      parent1 = list(comb[0])  
+      parent2 = list(comb[1])  
+  
+      copoints = sorted(random.choices(range(len(parent1) + 1), k=2))  
+  
+      child1 = parent2[:copoints[0]] + parent1[copoints[0]:copoints[1]] + parent2[copoints[1]:]  
+      child2 = parent1[:copoints[0]] + parent2[copoints[0]:copoints[1]] + parent1[copoints[1]:]  
+  
+      children.append("".join(child1))  
+      children.append("".join(child2))  
+  
+   return children
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MjI2Mzg3OSwxNjU2NzI0Njk0LDU4MD
-QyMDAxMCw3MTIxNjY4MzksLTIxMTc4MjkyMCwtOTE0MjQ0OTg4
-LC0xODI0ODc4MzczLDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MT
-QzNjcwMiwtNzI0MjY3MDcsMTQ0MzQ1OTg4NV19
+eyJoaXN0b3J5IjpbLTE4MDcwNTA2NDcsMTY1NjcyNDY5NCw1OD
+A0MjAwMTAsNzEyMTY2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4
+OCwtMTgyNDg3ODM3MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNT
+E0MzY3MDIsLTcyNDI2NzA3LDE0NDM0NTk4ODVdfQ==
 -->
