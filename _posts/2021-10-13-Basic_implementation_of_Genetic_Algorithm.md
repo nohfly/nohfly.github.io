@@ -60,18 +60,26 @@ Next, we apply fitness function to calculate fitness score of each individuals t
 *1) It is not preferable to have different neighboring characters
 2)  Occurrence of each character should be the same as stated in the query*
 ```python
-def rankPopulation(charlist, popsize):
-	population = []
-	for i in range(popsize):
-		asdasdasd
-		population.append(individual)
-	return population
+def fitness(query, individual):  
+   score = 0  
+  
+  # Deduct score whenever the neighboring char is different  
+  for i in range(len(individual)-1):  
+      if individual[i] != individual[i+1]:  
+         score -= 1  
+  
+  # Deduct score if occurrence of char is different from the query  
+  for c in query.keys():  
+      cnt = individual.count(c)  
+      score -= abs(query[c] - cnt) * 1000  
+  
+  return score
 ```
-xxx
+The score deduction from the second rule,, has 1,000 times more weight than that of the first one
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDM1NjYzMDMsNTgwNDIwMDEwLDcxMj
-E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
-NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
-QyNjcwNywxNDQzNDU5ODg1XX0=
+eyJoaXN0b3J5IjpbMTg0MjQ4MjA3Niw1ODA0MjAwMTAsNzEyMT
+Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
+MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
+I2NzA3LDE0NDM0NTk4ODVdfQ==
 -->
