@@ -123,7 +123,11 @@ elitescore = popscore[:elitesize]
 ```
 ### 5) crossover
 For the crossover, we use two-point crossover approach. Given the parent A and B, the char sequence of children will be:
-child A = [head of parent B] + [middle of parent A]  
+```
+child A = [head of parent B] + [middle of parent A] + [tail of parent B]
+child B = [head of parent A] + [middle of parent B] + [tail of parent A]
+```
+This represents the reproduction of child genotypes from the parent
 ```python
 from itertools import combinations
 import random
@@ -148,7 +152,7 @@ def crossover(parents):
    return children
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg4MDI0MzQ2LDE2NTY3MjQ2OTQsNTgwND
+eyJoaXN0b3J5IjpbLTg5NzIxNzkxLDE2NTY3MjQ2OTQsNTgwND
 IwMDEwLDcxMjE2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgs
 LTE4MjQ4NzgzNzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxND
 M2NzAyLC03MjQyNjcwNywxNDQzNDU5ODg1XX0=
