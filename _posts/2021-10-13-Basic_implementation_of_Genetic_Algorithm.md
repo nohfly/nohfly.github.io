@@ -95,9 +95,23 @@ def rank_population(query, population):
   
    return rankedpop, popscore
 ```
+```python
+# Query statement  
+query = {'A': 4, 'B': 3, 'C': 2, 'D': 1}  
+  
+# Initial population setting  
+popsize = 50  
+  
+initialpop = initial_population(query, popsize)  
+  
+# Rank initial population  
+rankedpop, popscore = rank_population(query, initialpop)  
+print(rankedpop)  
+print(popscore)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNzU4NDM4Miw1ODA0MjAwMTAsNzEyMT
-Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
-MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
-I2NzA3LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbLTIwMTYyNzIxNjMsNTgwNDIwMDEwLDcxMj
+E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
+NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
+QyNjcwNywxNDQzNDU5ODg1XX0=
 -->
