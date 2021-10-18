@@ -32,21 +32,27 @@ We can use genetic algorithm to solve this problem starting with setting up the 
 ### 1) set initial population
 Initial population is the mix of first random individuals where we can start apply genetic algorithm.
 ```python
-def initialPopulation(charlist, popsize):
-	population = []
-	for i in range(popsize):
-		asdasdasd
-		population.append(individual)
-	return population
+def initial_population(query, popsize):  
+   population = []  
+  
+   charlist = list(query.keys())  
+   indiv_len = sum(query.values())  
+  
+   for i in range(popsize):  
+      sampled_char = random.choices(charlist, k=indiv_len)  
+      individual = "".join(sampled_char)  
+      population.append(individual)  
+  
+   return population
 ```
 Given the list of characters and size of the population, we can now get initial population composed of random individual strings.
 ```python
 import initialPopulation
 
-charlist = ['A'] * 4 + ['B'] * 3 + ['C'] * 2 + ['D'] * 1
-popsize = 50
-
-initialpop = initialPopulation(charlist, popsize)
+query = {'A': 4, 'B': 3, 'C': 2, 'D': 1}
+popsize = 50  
+  
+initialpop = initial_population(query, popsize)
 >>> ["ABCDCABABA","AABCBCBADA", ...]
 ```
 Next, we apply fitness function to calculate fitness score of each individuals to our environment, characters should be bagged, and rank them to select parents for the next generation.
@@ -64,8 +70,8 @@ def rankPopulation(charlist, popsize):
 xxx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgwNDIwMDEwLDcxMjE2NjgzOSwtMjExNz
-gyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4NzgzNzMsMzg4NTU0MDk2
-LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03MjQyNjcwNywxNDQzND
-U5ODg1XX0=
+eyJoaXN0b3J5IjpbLTE2NDkwNzY4OTgsNTgwNDIwMDEwLDcxMj
+E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
+NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
+QyNjcwNywxNDQzNDU5ODg1XX0=
 -->
