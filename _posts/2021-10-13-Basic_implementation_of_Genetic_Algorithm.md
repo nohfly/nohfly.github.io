@@ -106,33 +106,21 @@ rankedpop, popscore = rank_population(query, initialpop)
 >>> [-5, -8, -2006, ...]
 ```
 ### 4) select elite population
-Using the defined *fitness()* function, we can now rank a population based on fitness scores of individuals.
+From the ranked population, we select parents(*elitepop*) which will reproduce offsprings. selec
 ```python
 rankedpop, popscore = rank_population(query, initialpop)  
 >>> ['CCBDAAABBA', 'BACBACAABD', 'ABCAADABBB', ...]
 >>> [-5, -8, -2006, ...]
+
 elitesize = 3  
   
 elitepop = rankedpop[:elitesize]  
 elitescore = popscore[:elitesize]
-import fitness
-
-def rank_population(query, population):  
-   score_result = []  
-  
-   for indiv in population:  
-      score = fitness(query, indiv)  
-      score_result.append((indiv, score))  
-  
-   score_result.sort(reverse=True, key=lambda x: x[1])  
-  
-   rankedpop = [pop for pop, score in score_result]  
-   popscore = [score for pop, score in score_result]  
-  
-   return rankedpop, popscore
+>>> ['CCBDAAABBA', 'BACBACAABD', 'ABCAADABBB']
+>>> [-5, -8, -2006]
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4Nzg3OTY3Myw1ODA0MjAwMTAsNzEyMT
+eyJoaXN0b3J5IjpbLTQzMjM4NTM5OCw1ODA0MjAwMTAsNzEyMT
 Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
 MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
 I2NzA3LDE0NDM0NTk4ODVdfQ==
