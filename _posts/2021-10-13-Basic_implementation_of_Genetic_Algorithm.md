@@ -56,7 +56,9 @@ initialpop = initial_population(query, popsize)
 >>> ["ABCDCABABA","AABCBCBADA", ...]
 ```
 ### 2) calculate fitness score
-Next, we apply fitness function to calculate fitness score of each individuals to our environment: characters should be bagged. To enforce this environment to our individuals, two rules will be applied: 1) it is not preferable to have different neighboring characters,
+Next, we apply fitness function to calculate fitness score of each individuals to our environment: characters should be bagged. To enforce this environment to our individuals, two rules will be applied:
+*1) It is not preferable to have different neighboring characters
+2)  Occurrence of each character should be the same as stated in the query*
 ```python
 def rankPopulation(charlist, popsize):
 	population = []
@@ -68,8 +70,8 @@ def rankPopulation(charlist, popsize):
 xxx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjM1NjczNiw1ODA0MjAwMTAsNzEyMT
-Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
-MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
-I2NzA3LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbLTE5NDM1NjYzMDMsNTgwNDIwMDEwLDcxMj
+E2NjgzOSwtMjExNzgyOTIwLC05MTQyNDQ5ODgsLTE4MjQ4Nzgz
+NzMsMzg4NTU0MDk2LDEyMjExOTQ5MTcsMTUxNDM2NzAyLC03Mj
+QyNjcwNywxNDQzNDU5ODg1XX0=
 -->
