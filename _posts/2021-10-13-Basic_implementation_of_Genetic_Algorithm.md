@@ -103,11 +103,18 @@ initialpop = initial_population(query, popsize)
 
 rankedpop, popscore = rank_population(query, initialpop)  
 >>> ['CCBDAAABBA', 'BACBACAABD', 'ABCAADABBB', ...]
->>>> [-5, -8, -2006, ...]
+>>> [-5, -8, -2006, ...]
 ```
-### 3) rank initial population
+### 4) select elite population
 Using the defined *fitness()* function, we can now rank a population based on fitness scores of individuals.
 ```python
+rankedpop, popscore = rank_population(query, initialpop)  
+>>> ['CCBDAAABBA', 'BACBACAABD', 'ABCAADABBB', ...]
+>>> [-5, -8, -2006, ...]
+elitesize = 3  
+  
+elitepop = rankedpop[:elitesize]  
+elitescore = popscore[:elitesize]
 import fitness
 
 def rank_population(query, population):  
@@ -125,7 +132,7 @@ def rank_population(query, population):
    return rankedpop, popscore
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMjY2MTc1Niw1ODA0MjAwMTAsNzEyMT
+eyJoaXN0b3J5IjpbLTM4Nzg3OTY3Myw1ODA0MjAwMTAsNzEyMT
 Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
 MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
 I2NzA3LDE0NDM0NTk4ODVdfQ==
