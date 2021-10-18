@@ -173,6 +173,7 @@ def mutation(query, parents, mutation_rate):
 ```
 ### 7) iterate through generations
 After the *crossover* and *mutation* step to populate more individuals, the total population goes through *rank_population()*. Then the whole process, except the **1) set initial population**, iterates through generations until the optimal solution is found.
+
 The integrated method of genetic algorithm is as follows:
 ```python
 import initial_population, rank_population, crossover, mutation
@@ -258,11 +259,13 @@ def main():
 ```
 The top-scored individual in the initial population was "BBDCAABAAC" with the score of *-6*, and before the iteration reaches 100th generation, the top-scored individual was "BBBDAAAACC" with the score of *-3*.
 With simple heuristics, we can come up with the answer of "AAAABBBCCD" and that the best score will always be *-3* for the given query.
+
 Using the genetic algorithm, we do not need to specify the process of solving the problem, but we only need to specify how the result should be look like. By producing semi-random populations scored/ranked by fitness function, the genetic algorithm will search the most optimized solution to the given problem.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMDQyNDk2MywtMjI3ODg1MjE1LC03MT
-I2Mjg4MzgsMTY1NjcyNDY5NCw1ODA0MjAwMTAsNzEyMTY2ODM5
-LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3MywzOD
-g1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyNDI2NzA3
-LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbLTU0MDcyODM0MSwtNTAwNDI0OTYzLC0yMj
+c4ODUyMTUsLTcxMjYyODgzOCwxNjU2NzI0Njk0LDU4MDQyMDAx
+MCw3MTIxNjY4MzksLTIxMTc4MjkyMCwtOTE0MjQ0OTg4LC0xOD
+I0ODc4MzczLDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MTQzNjcw
+MiwtNzI0MjY3MDcsMTQ0MzQ1OTg4NV19
 -->
