@@ -58,7 +58,7 @@ initialpop = initial_population(query, popsize)
 ### 2) calculate fitness score
 Next, we apply fitness function to calculate fitness score of each individuals to our environment: characters should be bagged. To enforce this environment to our individuals, two rules will be applied:
 *1) It is not preferable to have different neighboring characters
-2)  Occurrence of each character should be the same as stated in the query*
+2) Occurrence of each character should be the same as stated in the query*
 ```python
 def fitness(query, individual):  
    score = 0  
@@ -75,11 +75,11 @@ def fitness(query, individual):
   
   return score
 ```
-The score deduction from the second rule,, has 1,000 times more weight than that of the first one
+The score deduction from the second rule, *2) Occurrence of each character should be the same as stated in the query*, has 1,000 times more weight than that of the first one, as it is more important to comply with the given query.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MjQ4MjA3Niw1ODA0MjAwMTAsNzEyMT
-Y2ODM5LC0yMTE3ODI5MjAsLTkxNDI0NDk4OCwtMTgyNDg3ODM3
-MywzODg1NTQwOTYsMTIyMTE5NDkxNywxNTE0MzY3MDIsLTcyND
-I2NzA3LDE0NDM0NTk4ODVdfQ==
+eyJoaXN0b3J5IjpbLTE4NDkzOTY0LDU4MDQyMDAxMCw3MTIxNj
+Y4MzksLTIxMTc4MjkyMCwtOTE0MjQ0OTg4LC0xODI0ODc4Mzcz
+LDM4ODU1NDA5NiwxMjIxMTk0OTE3LDE1MTQzNjcwMiwtNzI0Mj
+Y3MDcsMTQ0MzQ1OTg4NV19
 -->
