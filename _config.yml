@@ -16,12 +16,12 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Rin's Dev Posts"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Kyungrin Noh"
+description              : "Notes and memos to remember what I have done and recognize where I should be"
+url                      : "https://nohfly.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -101,11 +101,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Kyungrin"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "Graduated with Master's degree in Bioinformatics at Bio-Information System Laboratory, KAIST. Currently working as data scientist/consultant in GBS, IBM Korea."
+  location         : "Seoul, Republic of Korea"
+  email            : "nohfly@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
