@@ -101,7 +101,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Kyungrin"
+  name             : "Kyungrin Noh"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Graduated with Master's degree in Bioinformatics at Bio-Information System Laboratory, KAIST. Currently working as data scientist/consultant in GBS, IBM Korea."
   location         : "Seoul, Republic of Korea"
